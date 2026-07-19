@@ -1,2 +1,10 @@
-ESP-IDF is required to build this project.
-The emulator replicates the ESP32‑S3 environment for testing and development.
+## Setup
+### Prerequisites
+- C/C++
+- CMake
+- ESP-IDF
+- Wokwi-CLI
+- Python (maybe?)
+
+### Emulation 
+- ESP32-S3
