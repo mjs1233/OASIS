@@ -3,4 +3,4 @@
 cmake_minimum_required(VERSION 3.22)
 set(COMPONENTS main) # for faster build time
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
-project(firmware)
+project(firmware C CXX)

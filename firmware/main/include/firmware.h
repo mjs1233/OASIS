@@ -1,7 +1,9 @@
 #ifndef FIRMWARE_FIRMWARE_H
 #define FIRMWARE_FIRMWARE_H
 
-#include <stdio.h>
-void print_size();
-
+namespace oasis {
+    void startup();
+    void run();
+    void terminate();
+}
 #endif //FIRMWARE_FIRMWARE_H

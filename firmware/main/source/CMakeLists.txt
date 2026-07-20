@@ -1,3 +1,3 @@
 set(COMPONENT_SRCS
-        "source/firmware.c"
+        "source/firmware.cpp"
 )
