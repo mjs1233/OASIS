@@ -1,4 +1,5 @@
 #include "firmware.h"
+#include "core/StagingBuffer.hpp"
 #include "freertos/task.h"
 #include "freertos/FreeRTOS.h"
 extern "C" {
