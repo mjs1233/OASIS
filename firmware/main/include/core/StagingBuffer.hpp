@@ -56,8 +56,6 @@ namespace oasis::core {
         std::atomic<T> m_writer_value {};
         T m_reader_value {};
         std::atomic<bool> m_modified {false};
-        bool reader_modified_cache {false};
-        bool reader_modified_cache_available {false};
 
     };
 

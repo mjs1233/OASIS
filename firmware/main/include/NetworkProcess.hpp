@@ -1,0 +1,8 @@
+//
+// Created by tgian on 26. 7. 23..
+//
+
+#ifndef FIRMWARE_NETWORKPROCESS_HPP
+#define FIRMWARE_NETWORKPROCESS_HPP
+
+#endif //FIRMWARE_NETWORKPROCESS_HPP
