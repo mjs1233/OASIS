@@ -23,7 +23,8 @@ namespace oasis {
     }
 
     bool MainProcess::create_impl() {
-        xTaskCreatePinnedToCore(
+        BaseType_t ret =
+            xTaskCreatePinnedToCore(
                    MainProcess::run,
                    "main process",
                    MainProcess::STACK_SIZE,
@@ -32,6 +33,10 @@ namespace oasis {
                    &m_task_handle,
                    MainProcess::CORE
                    );
+
+        if (ret != pdPASS) {
+            return false;
+        }
         return true;
     }
 

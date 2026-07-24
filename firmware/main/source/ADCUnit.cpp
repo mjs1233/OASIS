@@ -28,10 +28,8 @@ ADCUnit::ADCUnit(int32_t adc_num)
 
 ADCUnit::~ADCUnit() {
     if (cali_handle != nullptr) {
-#if CONFIG_ADC_CALI_SCHEME_CURVE_FITTING_SUPPORTED
+#if ADC_CALI_SCHEME_CURVE_FITTING_SUPPORTED
         adc_cali_delete_scheme_curve_fitting(cali_handle);
-#elif CONFIG_ADC_CALI_SCHEME_LINE_FITTING_SUPPORTED
-        adc_cali_delete_scheme_line_fitting(cali_handle);
 #endif
         cali_handle = nullptr;
     }
@@ -66,7 +64,7 @@ void ADCUnit::add_channel(uint32_t channel) {
     if (cali_handle == nullptr) {
         adc_unit_t unit = (adc_num == 1) ? ADC_UNIT_1 : ADC_UNIT_2;
 
-#if CONFIG_ADC_CALI_SCHEME_CURVE_FITTING_SUPPORTED
+#if ADC_CALI_SCHEME_CURVE_FITTING_SUPPORTED
         adc_cali_curve_fitting_config_t cali_config = {
             .unit_id = unit,
             .chan = chan,
@@ -74,13 +72,6 @@ void ADCUnit::add_channel(uint32_t channel) {
             .bitwidth = ADC_BITWIDTH_DEFAULT,
         };
         ret = adc_cali_create_scheme_curve_fitting(&cali_config, &cali_handle);
-#elif CONFIG_ADC_CALI_SCHEME_LINE_FITTING_SUPPORTED
-        adc_cali_line_fitting_config_t cali_config = {
-            .unit_id = unit,
-            .atten = ADC_ATTEN_DB_12,
-            .bitwidth = ADC_BITWIDTH_DEFAULT,
-        };
-        ret = adc_cali_create_scheme_line_fitting(&cali_config, &cali_handle);
 #endif
 
         if (ret != ESP_OK) {
