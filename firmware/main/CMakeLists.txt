@@ -3,7 +3,7 @@ include(${CMAKE_CURRENT_LIST_DIR}/source/CmakeLists.txt)
 idf_component_register(
         SRCS "${COMPONENT_SRCS}"
         INCLUDE_DIRS "include"
-        REQUIRES esp_adc driver
+        REQUIRES esp_adc driver esp_driver_gptimer
 )
 
 set(CMAKE_CXX_STANDARD 23)
