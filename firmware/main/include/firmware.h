@@ -5,7 +5,5 @@
 
 namespace oasis {
     void startup();
-    void run();
-    void terminate();
 }
 #endif //FIRMWARE_FIRMWARE_H

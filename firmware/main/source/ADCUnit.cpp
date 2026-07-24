@@ -94,7 +94,7 @@ int ADCUnit::raw_read(uint32_t channel) {
     if (adc_handle == nullptr) return -1;
 
     int raw_val = 0;
-    adc_channel_t chan = static_cast<adc_channel_t>(channel);
+    auto chan = static_cast<adc_channel_t>(channel);
     esp_err_t ret = adc_oneshot_read(adc_handle, chan, &raw_val);
 
     if (ret != ESP_OK) {

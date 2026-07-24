@@ -3,4 +3,5 @@ set(COMPONENT_SRCS
         "source/SensorTask.cpp"
         "source/MainProcess.cpp"
         "source/ADCUnit.cpp"
+        "source/NetworkProcess.cpp"
 )

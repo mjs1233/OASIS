@@ -1,4 +1,6 @@
 #include "../include/MainProcess.hpp"
+#include "InitialConfigData.hpp"
+#include <atomic>
 //
 // Created by tgian on 26. 7. 23..
 //
@@ -42,8 +44,19 @@ namespace oasis {
         m_adc_unit_0.add_channel(ADC_BATTERY_CHANNEL_NUM);
 
         //2. read ROM
+
+        printf("core 0 init done. wait\n");
+        //3. sync with network core & recv config
+        uint32_t notification_value = 0;
+        if (xTaskNotifyWait(0x0, notify::NETWORK_INITIAL_CONFIG_SYNC,&notification_value, portMAX_DELAY) == true) {
+            std::atomic_thread_fence(std::memory_order_acquire);
+            //read config data
+            printf("core 1 notify recv. init done\n");
+        }
+
     }
 
     void MainProcess::update_impl() {
+
     }
 }

@@ -8,6 +8,8 @@
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
 #include "core/ADCUnit.hpp"
+#include "NotifyFlags.hpp"
+
 #include <inttypes.h>
 namespace oasis {
     class MainProcess {
