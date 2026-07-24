@@ -1,4 +1,5 @@
 #include "../include/MainProcess.hpp"
+
 #include "InitialConfigData.hpp"
 #include <atomic>
 //
@@ -58,6 +59,20 @@ namespace oasis {
             //read config data
             printf("core 1 notify recv. init done\n");
         }
+
+        //start network service
+
+        //start Timer
+        TimerHandle_t timer = xTimerCreate(
+            "extern condition timer",
+            pdMS_TO_TICKS(5000),
+            pdTRUE,
+            (void*)0,
+            extern_condition_timer_callback
+            );
+        xTimerStart(timer, 0);
+
+        //start interrupt
 
     }
 

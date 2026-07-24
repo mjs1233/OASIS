@@ -23,6 +23,8 @@ namespace oasis {
 
         bool create();
         static void run(void* pvParameter);
+        static void extern_condition_timer_callback(TimerHandle_t xtimer);
+
     private:
         bool create_impl();
         void init_impl();
