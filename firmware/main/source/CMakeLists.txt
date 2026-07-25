@@ -5,4 +5,5 @@ set(COMPONENT_SRCS
         "source/ADCUnit.cpp"
         "source/NetworkProcess.cpp"
         "source/IMUProcess.cpp"
+        "source/NetworkQueue.cpp"
 )

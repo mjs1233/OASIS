@@ -57,6 +57,7 @@ namespace oasis {
 
     void NetworkProcess::update_impl() {
 
+        xQueueReceive()
     }
 
 }

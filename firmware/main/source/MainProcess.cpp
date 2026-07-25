@@ -2,9 +2,6 @@
 
 #include "InitialConfigData.hpp"
 #include <atomic>
-//
-// Created by tgian on 26. 7. 23..
-//
 namespace oasis {
     MainProcess::MainProcess() {
     }
