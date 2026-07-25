@@ -84,6 +84,7 @@ void ADCUnit::add_channel(uint32_t channel) {
 int ADCUnit::raw_read(uint32_t channel) {
     if (adc_handle == nullptr) return -1;
 
+    printf("read!\n");
     int raw_val = 0;
     auto chan = static_cast<adc_channel_t>(channel);
     esp_err_t ret = adc_oneshot_read(adc_handle, chan, &raw_val);

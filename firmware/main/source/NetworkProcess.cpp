@@ -42,8 +42,7 @@ namespace oasis {
     void NetworkProcess::init_impl() {
 
         //send & recv network task.
-        vTaskDelay(pdMS_TO_TICKS(5000));
-        printf("core 0: network recv\n");
+        //vTaskDelay(pdMS_TO_TICKS(5000));
         //notify & sync with main process
 
         //assign recv data
@@ -56,7 +55,7 @@ namespace oasis {
     }
 
     void NetworkProcess::update_impl() {
-
+        //TODO) NETWORK LOOP
     }
 
 }

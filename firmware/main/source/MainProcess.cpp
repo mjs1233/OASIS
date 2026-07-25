@@ -1,14 +1,14 @@
 #include "../include/MainProcess.hpp"
+
 #include "InitialConfigData.hpp"
 #include <atomic>
-//
-// Created by tgian on 26. 7. 23..
-//
 namespace oasis {
     MainProcess::MainProcess() {
     }
 
     MainProcess::~MainProcess() {
+        if (m_task_handle != nullptr)
+            xTimerDelete(m_extern_cond_timer, portMAX_DELAY);
     }
 
     bool MainProcess::create() {
@@ -40,6 +40,11 @@ namespace oasis {
         return true;
     }
 
+    void MainProcess::extern_condition_timer_callback(TimerHandle_t xtimer) {
+        auto* self = static_cast<MainProcess*>(pvTimerGetTimerID(xtimer));
+        xTaskNotify(self->m_task_handle, notify::TIMER_EXTREN_COND_CYCLE, eSetBits);
+    }
+
     void MainProcess::init_impl() {
         //startup seq.
         //1. init Peripheral
@@ -50,18 +55,33 @@ namespace oasis {
 
         //2. read ROM
 
-        printf("core 0 init done. wait\n");
         //3. sync with network core & recv config
         uint32_t notification_value = 0;
-        if (xTaskNotifyWait(0x0, notify::NETWORK_INITIAL_CONFIG_SYNC,&notification_value, portMAX_DELAY) == true) {
+        if (xTaskNotifyWait(0x0, 0xFFFFFFFF,&notification_value, portMAX_DELAY) == true) {
             std::atomic_thread_fence(std::memory_order_acquire);
             //read config data
             printf("core 1 notify recv. init done\n");
+        }else {
+            //DO Restart Stuff.
+            printf("init fail?\n");
         }
+
+        //start network service
+
+        //start Timer
+        m_extern_cond_timer = xTimerCreate(
+            "extern condition timer",
+            pdMS_TO_TICKS(5000),
+            pdTRUE,
+            this,
+            extern_condition_timer_callback
+            );
+        xTimerStart(m_extern_cond_timer, 0);
+
+        //start interrupt
 
     }
 
     void MainProcess::update_impl() {
-
     }
 }

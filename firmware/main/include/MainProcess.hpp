@@ -23,6 +23,8 @@ namespace oasis {
 
         bool create();
         static void run(void* pvParameter);
+        static void extern_condition_timer_callback(TimerHandle_t xtimer);
+
     private:
         bool create_impl();
         void init_impl();
@@ -30,7 +32,7 @@ namespace oasis {
 
 
         TaskHandle_t m_task_handle = nullptr;
-
+        TimerHandle_t m_extern_cond_timer = nullptr;
         static constexpr uint32_t CORE = 1;
         static constexpr uint32_t STACK_SIZE = 4096;
         static constexpr uint32_t PRIORITY = 2;
