@@ -3,6 +3,7 @@
 #include "IMUProcess.hpp"
 #include "NotifyFlags.hpp"
 
+
 namespace oasis {
 
     bool IMUProcess::create() {
@@ -57,6 +58,8 @@ namespace oasis {
             .clk_src = GPTIMER_CLK_SRC_DEFAULT,
             .direction = GPTIMER_COUNT_UP,
             .resolution_hz = 1000000,
+            .intr_priority = 0,
+            .flags = {}
         };
         gptimer_handle_t gptimer = nullptr;
         ESP_ERROR_CHECK(gptimer_new_timer(&timer_config, &gptimer));

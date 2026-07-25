@@ -42,7 +42,7 @@ namespace oasis {
     void NetworkProcess::init_impl() {
 
         //send & recv network task.
-        vTaskDelay(pdMS_TO_TICKS(5000));
+        //vTaskDelay(pdMS_TO_TICKS(5000));
         //notify & sync with main process
 
         //assign recv data

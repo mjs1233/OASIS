@@ -7,6 +7,8 @@ namespace oasis {
     }
 
     MainProcess::~MainProcess() {
+        if (m_task_handle != nullptr)
+            xTimerDelete(m_extern_cond_timer, portMAX_DELAY);
     }
 
     bool MainProcess::create() {
@@ -38,6 +40,11 @@ namespace oasis {
         return true;
     }
 
+    void MainProcess::extern_condition_timer_callback(TimerHandle_t xtimer) {
+        auto* self = static_cast<MainProcess*>(pvTimerGetTimerID(xtimer));
+        xTaskNotify(self->m_task_handle, notify::TIMER_EXTREN_COND_CYCLE, eSetBits);
+    }
+
     void MainProcess::init_impl() {
         //startup seq.
         //1. init Peripheral
@@ -50,7 +57,7 @@ namespace oasis {
 
         //3. sync with network core & recv config
         uint32_t notification_value = 0;
-        if (xTaskNotifyWait(0x0, notify::NETWORK_INITIAL_CONFIG_SYNC,&notification_value, portMAX_DELAY) == true) {
+        if (xTaskNotifyWait(0x0, 0xFFFFFFFF,&notification_value, portMAX_DELAY) == true) {
             std::atomic_thread_fence(std::memory_order_acquire);
             //read config data
             printf("core 1 notify recv. init done\n");
@@ -62,20 +69,19 @@ namespace oasis {
         //start network service
 
         //start Timer
-        TimerHandle_t timer = xTimerCreate(
+        m_extern_cond_timer = xTimerCreate(
             "extern condition timer",
             pdMS_TO_TICKS(5000),
             pdTRUE,
-            (void*)0,
+            this,
             extern_condition_timer_callback
             );
-        xTimerStart(timer, 0);
+        xTimerStart(m_extern_cond_timer, 0);
 
         //start interrupt
 
     }
 
     void MainProcess::update_impl() {
-
     }
 }

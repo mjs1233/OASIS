@@ -9,7 +9,8 @@ namespace oasis::notify {
     enum NotifyFlags {
         NETWORK_INITIAL_CONFIG_SYNC = 1 << 1,
 
-        ISR_IMU_BUFFER_FULL = 1 << 2
+        ISR_IMU_BUFFER_FULL = 1 << 2,
+        TIMER_EXTREN_COND_CYCLE = 1 << 3
     };
 }
 
