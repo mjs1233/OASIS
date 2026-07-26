@@ -83,5 +83,23 @@ namespace oasis {
     }
 
     void MainProcess::update_impl() {
+
+        uint32_t notification_value = 0;
+        if (xTaskNotifyWait(0x0, 0xFFFFFFFF,&notification_value, portMAX_DELAY) == true) {
+            std::atomic_thread_fence(std::memory_order_acquire);
+
+            if (notification_value & notify::ISR_IMU_BUFFER_FULL) {
+                //do IMU buffer flush.
+            }
+
+            if (notification_value & notify::TIMER_EXTREN_COND_CYCLE) {
+
+            }
+
+
+
+
+        }
+
     }
 }

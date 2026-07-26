@@ -4,6 +4,7 @@
 
 #ifndef FIRMWARE_IMUPROCESS_HPP
 #define FIRMWARE_IMUPROCESS_HPP
+#include "core/BufferPool.hpp"
 
 namespace oasis {
 
