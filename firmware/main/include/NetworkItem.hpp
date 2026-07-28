@@ -38,7 +38,7 @@ namespace oasis {
         struct  __attribute__((packed)) device_init {
             static constexpr NetworkItemType type = NetworkItemType::CRITICAL;
 
-            uint8_t magic[2] = {0x89, 0x5E}; //運
+            uint8_t magic[2] = {0x89, 0x5E};
             uint8_t MAC[6] = {0,};
 
             bool serialize(std::array<uint8_t,1024>& arr,uint32_t& length) {
@@ -49,7 +49,7 @@ namespace oasis {
         struct __attribute__((packed)) device_init_recv {
             static constexpr NetworkItemType type = NetworkItemType::CRITICAL;
 
-            uint8_t magic[2] = {0x96, 0xBD}; //命
+            uint8_t magic[2] = {0x96, 0xBD};
             uint8_t worker_age = 0;
             uint8_t worker_weight = 0;
 
@@ -61,7 +61,7 @@ namespace oasis {
         struct __attribute__((packed)) worker_data {
             static constexpr NetworkItemType type = NetworkItemType::CRITICAL;
 
-            uint8_t magic[2] = {0x82, 0xCC}; //の
+            uint8_t magic[2] = {0x82, 0xCC};
             uint8_t raw_temp = 0;
             uint8_t raw_hum = 0;
             uint8_t raw_bpm = 0;
@@ -75,7 +75,7 @@ namespace oasis {
         struct __attribute__((packed)) worker_data_recv {
             static constexpr NetworkItemType type = NetworkItemType::CRITICAL;
 
-            uint8_t magic[2] = {0x89, 0xD8}; //華
+            uint8_t magic[2] = {0x89, 0xD8};
             uint8_t ttd = 0;
             bool deserialize(std::array<uint8_t,1024>& arr,uint32_t& length) {
                 return true;
@@ -87,10 +87,9 @@ namespace oasis {
         std::variant<
         network_item::null,
         network_item::device_init,
-        network_item::device_init_recv,
-        network_item::worker_data,
-        network_item::worker_data_recv
+        network_item::worker_data
     >;
+
 }
 
 #endif //FIRMWARE_NETWORKITEM_HPP

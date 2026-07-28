@@ -27,7 +27,7 @@ namespace oasis {
             xQueueAddToSet(m_queue_info, m_queue_set);
             xQueueAddToSet(m_semaphore_critical, m_queue_set);
         }
-        ~NetworkQueue();
+        ~NetworkQueue()=default;
 
         static void create() {
             if (g_instance == nullptr) {

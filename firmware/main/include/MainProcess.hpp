@@ -39,8 +39,6 @@ namespace oasis {
         void read_extern_condition();
 
 
-        float calc_kcal_per_min();
-
         IMUProcess m_imu_process;
 
         TaskHandle_t m_task_handle = nullptr;

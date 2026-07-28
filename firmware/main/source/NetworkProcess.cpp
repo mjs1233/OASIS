@@ -46,8 +46,8 @@ namespace oasis {
         //vTaskDelay(pdMS_TO_TICKS(5000));
         //notify & sync with main process
 
-        NetworkManager::init_wifi("YOUR_WIFI_SSID", "YOUR_WIFI_PASSWORD");
-        const char* target_url = "http://your-server.com/api/upload";
+        //NetworkManager::init_wifi("YOUR_WIFI_SSID", "YOUR_WIFI_PASSWORD");
+        //const char* target_url = "http://your-server.com/api/upload";
 
         //assign recv data
         //g_initial_config_data

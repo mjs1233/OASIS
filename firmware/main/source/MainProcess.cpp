@@ -134,7 +134,4 @@ namespace oasis {
 
     }
 
-    float MainProcess::calc_kcal_per_min() {
-           
-    }
 }
