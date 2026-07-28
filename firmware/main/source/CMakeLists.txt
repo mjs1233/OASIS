@@ -1,9 +1,10 @@
 set(COMPONENT_SRCS
         "source/firmware.cpp"
-        "source/SensorTask.cpp"
         "source/MainProcess.cpp"
         "source/ADCUnit.cpp"
         "source/NetworkProcess.cpp"
         "source/IMUProcess.cpp"
         "source/NetworkQueue.cpp"
+        "source/MPU6050.cpp"
+        "source/NetworkManager.cpp"
 )

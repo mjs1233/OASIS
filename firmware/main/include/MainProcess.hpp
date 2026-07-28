@@ -11,6 +11,9 @@
 #include "NotifyFlags.hpp"
 
 #include <inttypes.h>
+
+#include "IMUProcess.hpp"
+
 namespace oasis {
     class MainProcess {
     public:
@@ -30,6 +33,15 @@ namespace oasis {
         void init_impl();
         void update_impl();
 
+        void imu_buffer_handle();
+        void process_network_item();
+
+        void read_extern_condition();
+
+
+        float calc_kcal_per_min();
+
+        IMUProcess m_imu_process;
 
         TaskHandle_t m_task_handle = nullptr;
         TimerHandle_t m_extern_cond_timer = nullptr;

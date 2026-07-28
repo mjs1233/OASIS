@@ -20,13 +20,31 @@ namespace oasis {
         NetworkQueue() {
             m_queue_info = xQueueCreate(NetworkQueue::QUEUE_INFO_LENGTH, sizeof(network_item_variant));
             m_queue_critical = xQueueCreate(NetworkQueue::QUEUE_CRITICAL_LENGTH, sizeof(network_item_variant));
-
-            m_queue_set = xQueueCreateSet(NetworkQueue::QUEUE_INFO_LENGTH + NetworkQueue::QUEUE_CRITICAL_LENGTH);
+            m_semaphore_critical = xSemaphoreCreateBinary();
+            configASSERT(m_semaphore_critical != NULL);
+            m_queue_set = xQueueCreateSet(NetworkQueue::QUEUE_INFO_LENGTH + 1);
 
             xQueueAddToSet(m_queue_info, m_queue_set);
-            xQueueAddToSet(m_queue_critical, m_queue_set);
+            xQueueAddToSet(m_semaphore_critical, m_queue_set);
         }
         ~NetworkQueue();
+
+        static void create() {
+            if (g_instance == nullptr) {
+                g_instance = new NetworkQueue();
+            }
+        }
+
+        static NetworkQueue& instance() {
+            if (g_instance == nullptr) {
+                printf("init queue first!\n");
+            }
+            return *g_instance;
+        }
+
+        static void terminate() {
+            delete g_instance;
+        }
 
         template<typename T>
         bool enqueue(const T& item) {
@@ -45,34 +63,43 @@ namespace oasis {
             }
         }
 
-        void recv_and_serialize() {
-            //dispatch.
+        uint32_t recv_and_serialize(std::array<uint8_t, 1024>& buf) {
+
+            network_item_variant critical;
+            if (xQueueReceive(m_queue_critical, &critical, 0) == pdTRUE) {
+                return dispatch(critical,buf);
+            }
 
             QueueSetMemberHandle_t activated =
               xQueueSelectFromSet(m_queue_set, portMAX_DELAY);
 
-            if (activated == m_queue_critical) {
-                network_item_variant critical;
-                while (xQueueReceive(m_queue_critical, &critical, 0) == pdTRUE) {
-                    dispatch(critical);
-                }
-            } else if (activated == m_queue_info) {
-                network_item_variant info;
-                if (xQueueReceive(m_queue_info, &info, 0) == pdTRUE) {
-                    dispatch(info);
+            if (activated == m_semaphore_critical) {
+
+                xSemaphoreTake(m_semaphore_critical, 0);
+                if (xQueueReceive(m_queue_critical, &critical, 0) == pdTRUE) {
+                    return dispatch(critical,buf);
                 }
             }
+            else if (activated == m_queue_info) {
+                network_item_variant info;
+                if (xQueueReceive(m_queue_info, &info, 0) == pdTRUE) {
+                    return dispatch(info,buf);
+                }
+            }
+            return 0;
 
         }
 
     private:
-        void dispatch(network_item_variant& item) {
-            std::visit([](auto&& obj) {
-                std::array<uint8_t, 1024> buf{};
-                uint32_t length = 0;
-                if (obj.serialize(buf,length))
-                    printf("transmit %ld bytes\n", length);
+        uint32_t dispatch(network_item_variant& item,std::array<uint8_t, 1024>& buf) {
+            uint32_t length = 0;
+            std::visit([&buf, &length](auto&& obj) {
+
+                if (!obj.serialize(buf,length)) {
+                    length = 0;
+                }
             }, item);
+            return length;
         }
         void drain() {
             //TODO) IMPL. drain.
@@ -80,7 +107,10 @@ namespace oasis {
 
         QueueHandle_t m_queue_critical;
         QueueHandle_t m_queue_info;
+
+        SemaphoreHandle_t m_semaphore_critical;
         QueueSetHandle_t m_queue_set;
+        static NetworkQueue* g_instance;
         static constexpr int QUEUE_CRITICAL_LENGTH = 16;
         static constexpr int QUEUE_INFO_LENGTH = 16;
         static constexpr int ENQUEUE_WAIT_TICK = pdMS_TO_TICKS(100);

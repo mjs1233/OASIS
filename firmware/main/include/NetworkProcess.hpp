@@ -5,6 +5,9 @@
 #ifndef FIRMWARE_NETWORKPROCESS_HPP
 #define FIRMWARE_NETWORKPROCESS_HPP
 #include <freertos/FreeRTOS.h>
+
+#include "NetworkQueue.hpp"
+
 namespace oasis {
     class NetworkProcess {
     public:
@@ -25,6 +28,8 @@ namespace oasis {
 
         TaskHandle_t m_task_handle = nullptr;
         TaskHandle_t m_main_process_task_handle = nullptr;
+
+        NetworkQueue m_network_queue;
 
         static constexpr uint32_t CORE = 0;
         static constexpr uint32_t STACK_SIZE = 4096;

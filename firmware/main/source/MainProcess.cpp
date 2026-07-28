@@ -37,7 +37,12 @@ namespace oasis {
         if (ret != pdPASS) {
             return false;
         }
+
+        if (m_imu_process.create() == false) {
+            return false;
+        }
         return true;
+
     }
 
     void MainProcess::extern_condition_timer_callback(TimerHandle_t xtimer) {
@@ -61,7 +66,7 @@ namespace oasis {
             std::atomic_thread_fence(std::memory_order_acquire);
             //read config data
             printf("core 1 notify recv. init done\n");
-        }else {
+        } else {
             //DO Restart Stuff.
             printf("init fail?\n");
         }
@@ -84,22 +89,52 @@ namespace oasis {
 
     void MainProcess::update_impl() {
 
-        uint32_t notification_value = 0;
-        if (xTaskNotifyWait(0x0, 0xFFFFFFFF,&notification_value, portMAX_DELAY) == true) {
-            std::atomic_thread_fence(std::memory_order_acquire);
+        while (true) {
+            uint32_t notification_value = 0;
+            if (xTaskNotifyWait(0x0, 0xFFFFFFFF,&notification_value, portMAX_DELAY) == true) {
+                std::atomic_thread_fence(std::memory_order_acquire);
 
-            if (notification_value & notify::ISR_IMU_BUFFER_FULL) {
-                //do IMU buffer flush.
+                if (notification_value & notify::ISR_IMU_BUFFER_FULL) {
+                    //do IMU buffer flush.
+                    printf("Main Process, recv imu buffer\n");
+                    imu_buffer_handle();
+                    process_network_item();
+                }
+
+                if (notification_value & notify::TIMER_EXTREN_COND_CYCLE) {
+                    read_extern_condition();
+                }
             }
-
-            if (notification_value & notify::TIMER_EXTREN_COND_CYCLE) {
-
-            }
-
-
-
-
         }
 
+    }
+
+
+
+
+    void MainProcess::imu_buffer_handle() {
+        IMUProcess::IMUBuffer& imu_buffer = m_imu_process.get_buffer_pool();
+        while (true) {
+            IMUData* imu_data = imu_buffer.acquire_ready();
+            if (imu_data == nullptr) {
+                break;
+            }
+            //read other data.
+            //release
+            imu_buffer.release_free(imu_data);
+        }
+    }
+
+    void MainProcess::process_network_item() {
+
+        //send to Network Queue
+    }
+
+    void MainProcess::read_extern_condition() {
+
+    }
+
+    float MainProcess::calc_kcal_per_min() {
+           
     }
 }
