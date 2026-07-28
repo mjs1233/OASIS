@@ -23,7 +23,7 @@ namespace oasis {
     namespace network_item {
 
         //example item
-        struct null_item {
+        struct __attribute__((packed)) null {
             static constexpr NetworkItemType type = NetworkItemType::INFO;
             bool serialize(std::array<uint8_t,1024>& arr,uint32_t& length) {
                 arr[0] = 'N';
@@ -34,9 +34,63 @@ namespace oasis {
                 return true;
             }
         };
+
+        struct  __attribute__((packed)) device_init {
+            static constexpr NetworkItemType type = NetworkItemType::CRITICAL;
+
+            uint8_t magic[2] = {0x89, 0x5E}; //運
+            uint8_t MAC[6] = {0,};
+
+            bool serialize(std::array<uint8_t,1024>& arr,uint32_t& length) {
+                return true;
+            }
+        };
+
+        struct __attribute__((packed)) device_init_recv {
+            static constexpr NetworkItemType type = NetworkItemType::CRITICAL;
+
+            uint8_t magic[2] = {0x96, 0xBD}; //命
+            uint8_t worker_age = 0;
+            uint8_t worker_weight = 0;
+
+            bool deserialize(std::array<uint8_t,1024>& arr,uint32_t& length) {
+                return true;
+            }
+        };
+
+        struct __attribute__((packed)) worker_data {
+            static constexpr NetworkItemType type = NetworkItemType::CRITICAL;
+
+            uint8_t magic[2] = {0x82, 0xCC}; //の
+            uint8_t raw_temp = 0;
+            uint8_t raw_hum = 0;
+            uint8_t raw_bpm = 0;
+            uint8_t battery_voltage = 0;
+
+            bool serialize(std::array<uint8_t,1024>& arr,uint32_t& length) {
+                return true;
+            }
+        };
+
+        struct __attribute__((packed)) worker_data_recv {
+            static constexpr NetworkItemType type = NetworkItemType::CRITICAL;
+
+            uint8_t magic[2] = {0x89, 0xD8}; //華
+            uint8_t ttd = 0;
+            bool deserialize(std::array<uint8_t,1024>& arr,uint32_t& length) {
+                return true;
+            }
+        };
     }
 
-    using network_item_variant = std::variant<network_item::null_item>;
+    using network_item_variant =
+        std::variant<
+        network_item::null,
+        network_item::device_init,
+        network_item::device_init_recv,
+        network_item::worker_data,
+        network_item::worker_data_recv
+    >;
 }
 
 #endif //FIRMWARE_NETWORKITEM_HPP
