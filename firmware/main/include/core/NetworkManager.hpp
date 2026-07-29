@@ -25,6 +25,7 @@ namespace oasis {
     public:
         static void init_wifi(const char* ssid, const char* password);
         static bool send_binary_data(const char* url, const std::array<uint8_t, 1024>& data, int length);
+        static bool recv_binary_data(const char* url, const std::array<uint8_t, 1024>& data, int length);
     private:
         static void wifi_event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data);
 
