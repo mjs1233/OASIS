@@ -1,7 +1,8 @@
 #include "../include/MainProcess.hpp"
-
 #include "InitialConfigData.hpp"
 #include <atomic>
+#include "../include/NTC.hpp"  // 상대 경로로 강제 지정
+
 namespace oasis {
     MainProcess::MainProcess() {
     }
@@ -80,8 +81,41 @@ namespace oasis {
 
         //start interrupt
 
+    } // <--- 아까 이 닫는 괄호가 지워졌었습니다!
+
+    // [추가 및 수정된 부분] 제대로 된 위치의 update_impl
+    void MainProcess::update_impl() {
+        // 1. NTC 센서 설정 및 객체 생성
+   // 구조체 선언 순서와 정확히 일치시킨 초기화 코드
+    oasis::NTCConfig ntc_cfg {
+        .v_cc_mv     = 3300.0f,
+        .r_fixed_ohm = 10000.0f,
+        .r_0_ohm     = 10000.0f,
+        .t_0_kelvin  = 298.15f,
+        .beta        = 3950.0f
+    };
+        
+        // 기존 멤버 변수인 m_adc_unit_0과 매크로를 사용하여 NTC 센서 주입
+       oasis:: NTCSensor ntc_sensor(m_adc_unit_0, ADC_TEMP_0_CHANNEL_NUM, ntc_cfg);
+        ntc_sensor.init();
+
+        printf("Starting Main Loop...\n");
+
+        // 2. 메인 이벤트 루프
+        while (true) {
+            uint32_t notify_value = 0;
+            
+            // 다른 태스크나 타이머에서 알림이 올 때까지 무한 대기 (CPU 점유율 안 먹음)
+            if (xTaskNotifyWait(0x0, 0xFFFFFFFF, &notify_value, portMAX_DELAY) == pdTRUE) {
+                
+                // 5초마다 울리는 extern_condition_timer_callback의 알림인지 확인
+                if (notify_value & notify::TIMER_EXTREN_COND_CYCLE) {
+                    // NTC 온도 읽기 및 출력
+                    float current_temp = ntc_sensor.read();
+                    printf("[Timer 5s] Current NTC Temp (Ch 0): %.2f C\n", current_temp);
+                }
+            }
+        }
     }
 
-    void MainProcess::update_impl() {
-    }
-}
+} // namespace oasis 닫기
