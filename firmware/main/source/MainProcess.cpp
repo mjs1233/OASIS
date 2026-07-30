@@ -116,7 +116,7 @@ namespace oasis {
     void MainProcess::imu_buffer_handle() {
         IMUProcess::IMUBuffer& imu_buffer = m_imu_process.get_buffer_pool();
         while (true) {
-            IMUData* imu_data = imu_buffer.acquire_ready();
+            IMUData* imu_data = imu_buffer.acquire_ready(0);
             if (imu_data == nullptr) {
                 break;
             }

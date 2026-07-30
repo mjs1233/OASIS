@@ -93,6 +93,7 @@ namespace oasis {
             printf("IMU Process push data\n");
             if (m_buffer.publish_ready(data) == false) {
                 printf("IMU buffer push failed\n");
+                continue;
             }
             xTaskNotify(m_main_process_task_handle, notify::ISR_IMU_BUFFER_FULL, eSetBits);
         }
