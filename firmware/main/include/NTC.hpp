@@ -1,6 +1,6 @@
 #pragma once
 #include <cstdint>
-
+#include"core/ADCUnit.hpp"
 
 namespace oasis {
 

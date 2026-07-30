@@ -119,18 +119,3 @@ namespace oasis {
     }
 
 } // namespace oasis 닫기
-extern "C" void app_main(void) {
-    // MainProcess 객체 생성 및 태스크 구동
-    oasis::MainProcess main_process;
-    if (main_process.create()) {
-        printf("MainProcess task created successfully.\n");
-    } else {
-        printf("Failed to create MainProcess task!\n");
-    }
-
-    // app_main 함수가 종료되면 FreeRTOS 메인 태스크가 끝나므로 
-    // 보통 무한 루프를 돌며 대기하거나 삭제 처리합니다.
-    while (true) {
-        vTaskDelay(pdMS_TO_TICKS(1000));
-    }
-}
