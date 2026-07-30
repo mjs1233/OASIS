@@ -1,15 +1,10 @@
-set(CMAKE_CXX_STANDARD 23)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+include(${CMAKE_CURRENT_LIST_DIR}/source/CmakeLists.txt)
 
 idf_component_register(
-    SRCS "main.cpp"
-         "source/ADCUnit.cpp"
-         "source/firmware.cpp"
-         "source/IMUProcess.cpp"
-         "source/MainProcess.cpp"
-         "source/NetworkProcess.cpp"
-         "source/NetworkQueue.cpp"
-         "source/NTC.cpp"
-    INCLUDE_DIRS "." "include" "source"
-    REQUIRES esp_adc driver esp_driver_gptimer
+        SRCS "${COMPONENT_SRCS}"
+        INCLUDE_DIRS "include"
+        REQUIRES esp_adc driver esp_driver_gptimer
 )
+
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
