@@ -4,7 +4,6 @@
 
 #ifndef FIRMWARE_INITIALCONFIGDATA_HPP
 #define FIRMWARE_INITIALCONFIGDATA_HPP
-#include <cinttypes>
 namespace oasis {
     struct InitialConfigData {
 

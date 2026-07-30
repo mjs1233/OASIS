@@ -4,6 +4,7 @@
 #include "NetworkProcess.hpp"
 #include "NotifyFlags.hpp"
 #include "InitialConfigData.hpp"
+#include "core/NetworkManager.hpp"
 #include <atomic>
 namespace oasis {
     NetworkProcess::NetworkProcess() {
@@ -45,6 +46,9 @@ namespace oasis {
         //vTaskDelay(pdMS_TO_TICKS(5000));
         //notify & sync with main process
 
+        //NetworkManager::init_wifi("YOUR_WIFI_SSID", "YOUR_WIFI_PASSWORD");
+        //const char* target_url = "http://your-server.com/api/upload";
+
         //assign recv data
         //g_initial_config_data
 
@@ -56,6 +60,11 @@ namespace oasis {
 
     void NetworkProcess::update_impl() {
         //TODO) NETWORK LOOP
+        while (true) {
+            std::array<std::uint8_t, 1024> buffer {};
+            m_network_queue.recv_and_serialize(buffer);
+
+        }
     }
 
 }

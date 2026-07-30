@@ -1,6 +1,6 @@
 #include <freertos/FreeRTOS.h>
-#include "driver/gptimer.h"
 #include "IMUProcess.hpp"
+#include "IMUData.hpp"
 #include "NotifyFlags.hpp"
 
 
@@ -52,7 +52,7 @@ namespace oasis {
 
         m_main_process_task_handle = xTaskGetHandle("main process");
         //Init MPU6050 I2C
-
+        //m_mpu6050.emplace();
 
         gptimer_config_t timer_config = {
             .clk_src = GPTIMER_CLK_SRC_DEFAULT,
@@ -65,7 +65,7 @@ namespace oasis {
         ESP_ERROR_CHECK(gptimer_new_timer(&timer_config, &gptimer));
 
         gptimer_alarm_config_t alarm_config = {
-            .alarm_count = 25000,
+            .alarm_count = 100000,
             .reload_count = 0,
             .flags = {
                 .auto_reload_on_alarm = true,
@@ -86,12 +86,21 @@ namespace oasis {
     void IMUProcess::update_impl() {
         while(true) {
             ulTaskNotifyTake(pdTRUE,portMAX_DELAY);
-            //TODO) some I2C stuff.
+            IMUData* data = m_buffer.acquire_free();
+            //m_mpu6050->read_fifo_buffer(data);
             //TODO) some filtering stuff
             //TODO) some value pushing stuff.
-            //notify if buffer is full
+            printf("IMU Process push data\n");
+            if (m_buffer.publish_ready(data) == false) {
+                printf("IMU buffer push failed\n");
+            }
             xTaskNotify(m_main_process_task_handle, notify::ISR_IMU_BUFFER_FULL, eSetBits);
         }
+    }
+
+
+    IMUProcess::IMUBuffer& IMUProcess::get_buffer_pool(){
+        return m_buffer;
     }
 
 } // namespace oasis
