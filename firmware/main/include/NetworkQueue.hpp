@@ -55,7 +55,10 @@ namespace oasis {
                 return xQueueSendToBack(m_queue_info, &data, ENQUEUE_WAIT_TICK) == pdPASS;
             }
             else if constexpr (T::type == NetworkItemType::CRITICAL) {
-                return xQueueSendToBack(m_queue_critical, &data, ENQUEUE_WAIT_TICK) == pdPASS;
+                bool result = xQueueSendToBack(m_queue_critical, &data, ENQUEUE_WAIT_TICK) == pdPASS;
+                if (result) {
+                    xSemaphoreGive(m_semaphore_critical);
+                }
             }
             else {
                 static_assert(sizeof(T) == 0, "unhandled network item type\n");

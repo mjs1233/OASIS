@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 4.2)
 project(Gateway)
 
 set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_executable(Gateway)
 target_compile_definitions(Gateway PRIVATE
         WIN32_LEAN_AND_MEAN

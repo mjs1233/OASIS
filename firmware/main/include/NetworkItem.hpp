@@ -50,6 +50,7 @@ namespace oasis {
             static constexpr NetworkItemType type = NetworkItemType::CRITICAL;
 
             uint8_t magic[2] = {0x96, 0xBD};
+            uint16_t worker_id;
             uint8_t worker_age = 0;
             uint8_t worker_weight = 0;
 
