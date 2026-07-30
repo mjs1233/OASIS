@@ -1,7 +1,8 @@
 #include "../include/MainProcess.hpp"
-
 #include "InitialConfigData.hpp"
 #include <atomic>
+#include "../include/NTC.hpp"  // 상대 경로로 강제 지정
+
 namespace oasis {
     MainProcess::MainProcess() {
     }

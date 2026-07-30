@@ -1,4 +1,5 @@
-include(${CMAKE_CURRENT_LIST_DIR}/source/CmakeLists.txt)
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 idf_component_register(
         SRCS "${COMPONENT_SRCS}"
