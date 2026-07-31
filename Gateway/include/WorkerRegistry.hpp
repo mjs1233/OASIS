@@ -9,6 +9,7 @@
 #include <optional>
 #include <string>
 #include <vector>
+#include "nlohmann/json.hpp"
 
 struct Worker {
 
@@ -49,7 +50,7 @@ public:
     uint32_t add(Worker worker);
     uint32_t add(const std::string& worker_json);
     bool remove(uint32_t worker_id) noexcept;
-    std::string status_json() const;
+    void status_json(nlohmann::json& json_) const;
     void save() const;
 
 private:

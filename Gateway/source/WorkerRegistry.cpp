@@ -9,7 +9,6 @@
 #include <stdexcept>
 #include <utility>
 
-#include "nlohmann/json.hpp"
 
 Worker::Worker(std::string json) {
     const auto data = nlohmann::json::parse(json);
@@ -109,15 +108,18 @@ bool WorkerRegistry::remove(const uint32_t worker_id) noexcept {
     return true;
 }
 
-std::string WorkerRegistry::status_json() const {
+void WorkerRegistry::status_json(nlohmann::json& json_) const {
     nlohmann::json workers = nlohmann::json::array();
+
     for (const auto& worker : m_workers) {
         if (worker.has_value()) {
             workers.push_back(nlohmann::json::parse(worker->status_json()));
         }
     }
 
-    return workers.dump();
+    json_["datacount"] = m_workers.size();
+    json_["workers"] = std::move(workers);
+
 }
 
 void WorkerRegistry::save() const {

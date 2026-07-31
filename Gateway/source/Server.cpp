@@ -66,7 +66,10 @@ namespace oasis {
             [this](const httplib::Request&, httplib::Response& res) {
                 std::scoped_lock lock(m_worker_mutex);
                 res.status = 200;
-                res.set_content(m_workers.status_json(), "application/json");
+                nlohmann::json json = nlohmann::json::object();
+                json["timepoint"] = (std::chrono::system_clock::now().time_since_epoch()).count();
+                m_workers.status_json(json);
+                res.set_content(json.dump(), "application/json");
             });
 
         m_server.Get("/add_worker",
@@ -161,8 +164,13 @@ namespace oasis {
             });
 
         m_server.Post("/dev_signal",
-            [](const httplib::Request&, httplib::Response&) {
+            [](const httplib::Request& req, httplib::Response& res) {
                 // Device signal.
+                const char* raw_bytes = req.body.data();
+                const char magic_0 = raw_bytes[0];
+                const char magic_1 = raw_bytes[1];
+
+
             });
     }
 }
