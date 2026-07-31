@@ -8,4 +8,5 @@ set(COMPONENT_SRCS
         "source/MPU6050.cpp"
         "source/NetworkManager.cpp"
         "source/NTC.cpp"
+        "source/WorkerDataSolver.cpp"
 )
