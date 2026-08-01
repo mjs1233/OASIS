@@ -90,7 +90,7 @@ namespace oasis {
             //m_mpu6050->read_fifo_buffer(data);
             //TODO) some filtering stuff
             //TODO) some value pushing stuff.
-            printf("IMU Process push data\n");
+            //printf("IMU Process push data\n");
             if (m_buffer.publish_ready(data) == false) {
                 printf("IMU buffer push failed\n");
                 continue;

@@ -82,6 +82,38 @@ namespace oasis {
         return success;
     }
 
+    bool NetworkManager::send_signal(const char* url) {
+        esp_http_client_config_t config = {};
+        config.url = url;
+        config.method = HTTP_METHOD_GET;
+        config.timeout_ms = 5000;
+
+        esp_http_client_handle_t client = esp_http_client_init(&config);
+        if (client == nullptr) {
+            printf("http client) client init fail\n");
+            return false;
+        }
+
+        // send
+        esp_err_t err = esp_http_client_perform(client);
+        bool success = false;
+
+        if (err == ESP_OK) {
+            int status_code = esp_http_client_get_status_code(client);
+            int64_t content_length = esp_http_client_get_content_length(client);
+            printf("HTTP GET send) | Status = %d, Content-Length = %lld\n", status_code, content_length);
+
+            if (status_code >= 200 && status_code < 300) {
+                success = true;
+            }
+        } else {
+            printf("HTTP GET fail\n");
+        }
+
+        esp_http_client_cleanup(client);
+        return success;
+    }
+
     void NetworkManager::wifi_event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data) {
         if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
             esp_wifi_connect();

@@ -46,10 +46,9 @@ namespace oasis {
         //vTaskDelay(pdMS_TO_TICKS(5000));
         //notify & sync with main process
 
-        NetworkManager::init_wifi("가209호", "kimch1084");
-        const char* target_url = "http://192.168.0.4/";
-        std::array<std::uint8_t, 1024> buffer {};
-        NetworkManager::send_binary_data(target_url,buffer, 0);
+        NetworkManager::init_wifi("SSID", "PASSWORD");
+        const char* target_url = "http://192.168.0.4:8080/";
+        NetworkManager::send_signal(target_url);
         //assign recv data
         //g_initial_config_data
 

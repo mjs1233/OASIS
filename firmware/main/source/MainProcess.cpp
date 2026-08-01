@@ -97,7 +97,7 @@ namespace oasis {
 
                 if (notification_value & notify::ISR_IMU_BUFFER_FULL) {
                     //do IMU buffer flush.
-                    printf("Main Process, recv imu buffer\n");
+                    //printf("Main Process, recv imu buffer\n");
                     imu_buffer_handle();
                     process_network_item();
                 }
