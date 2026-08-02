@@ -9,4 +9,6 @@ set(COMPONENT_SRCS
         "source/NetworkManager.cpp"
         "source/NTC.cpp"
         "source/WorkerDataSolver.cpp"
+        "source/LogProcess.cpp"
+        "source/PulseProcess.cpp"
 )

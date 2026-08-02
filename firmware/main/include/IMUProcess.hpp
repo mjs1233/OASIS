@@ -52,5 +52,5 @@ namespace oasis {
         static constexpr uint32_t PRIORITY = 6;
     };
 
-} // namespace s
+}
 #endif //FIRMWARE_IMUPROCESS_HPP

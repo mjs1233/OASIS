@@ -39,7 +39,15 @@ namespace oasis {
             return false;
         }
 
+        //init ADC
+        m_adc_unit_0.add_channel(ADC_TEMP_0_CHANNEL_NUM);
+        m_adc_unit_0.add_channel(ADC_BATTERY_CHANNEL_NUM);
+
         if (m_imu_process.create() == false) {
+            return false;
+        }
+
+        if (m_pulse_process.create(&m_adc_unit_0) == false) {
             return false;
         }
         return true;
@@ -54,10 +62,6 @@ namespace oasis {
     void MainProcess::init_impl() {
         //startup seq.
         //1. init Peripheral
-        //init ADC
-        m_adc_unit_0.add_channel(ADC_TEMP_0_CHANNEL_NUM);
-        m_adc_unit_0.add_channel(ADC_TEMP_1_CHANNEL_NUM);
-        m_adc_unit_0.add_channel(ADC_BATTERY_CHANNEL_NUM);
 
         //2. read ROM
 
@@ -97,12 +101,13 @@ namespace oasis {
 
                 if (notification_value & notify::ISR_IMU_BUFFER_FULL) {
                     //do IMU buffer flush.
-                    //printf("Main Process, recv imu buffer\n");
+                    printf("Main Process, recv imu buffer\n");
                     imu_buffer_handle();
                     process_network_item();
                 }
 
                 if (notification_value & notify::TIMER_EXTREN_COND_CYCLE) {
+                    printf("Main Process, Ext cond\n");
                     read_extern_condition();
                 }
             }
@@ -133,6 +138,8 @@ namespace oasis {
 
     void MainProcess::read_extern_condition() {
 
+        printf("NTC : %f\n", m_ntc.read());
+        //Read SHT31
     }
 
 }

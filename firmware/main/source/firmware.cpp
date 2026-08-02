@@ -2,11 +2,14 @@
 #include "freertos/task.h"
 #include "core/StagingBuffer.hpp"
 #include "firmware.h"
+
+#include "LogProcess.hpp"
 #include "MainProcess.hpp"
 #include "NetworkProcess.hpp"
 
 std::optional<oasis::MainProcess> g_main_process = std::nullopt;
 std::optional<oasis::NetworkProcess> g_network_process = std::nullopt;
+std::optional<oasis::LogProcess> g_log_process = std::nullopt;
 
 extern "C" {
 
@@ -17,6 +20,8 @@ void app_main(void) {
 
 void oasis::startup() {
 
+    g_log_process.emplace();
+    g_log_process->create();
     g_main_process.emplace();
     g_main_process->create();
     g_network_process.emplace();

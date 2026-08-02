@@ -1,0 +1,5330 @@
+ 0.273682
+read!
+pulse ADC : 0.301270
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.304688
+read!
+pulse ADC : 0.275146
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.254883
+read!
+pulse ADC : 0.285889
+read!
+pulse ADC : 0.306641
+read!
+pulse ADC : 0.316162
+read!
+pulse ADC : 0.296875
+read!
+pulse ADC : 0.267334
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.265381
+read!
+pulse ADC : 0.296875
+read!
+pulse ADC : 0.312988
+read!
+pulse ADC : 0.307861
+read!
+pulse ADC : 0.281738
+read!
+pulse ADC : 0.258057
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.276611
+read!
+pulse ADC : 0.303467
+read!
+pulse ADC : 0.316162
+read!
+pulse ADC : 0.302490
+read!
+pulse ADC : 0.271973
+read!
+pulse ADC : 0.251221
+read!
+pulse ADC : 0.257568
+read!
+pulse ADC : 0.289062
+read!
+pulse ADC : 0.307861
+read!
+pulse ADC : 0.312988
+read!
+pulse ADC : 0.290771
+read!
+pulse ADC : 0.264160
+read!
+pulse ADC : 0.251221
+read!
+pulse ADC : 0.269043
+read!
+pulse ADC : 0.299316
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.307129
+read!
+pulse ADC : 0.278320
+read!
+pulse ADC : 0.254150
+read!
+pulse ADC : 0.253662
+read!
+pulse ADC : 0.281494
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.316162
+read!
+pulse ADC : 0.298096
+read!
+pulse ADC : 0.269043
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.261719
+read!
+pulse ADC : 0.293457
+read!
+pulse ADC : 0.312500
+read!
+pulse ADC : 0.310303
+read!
+pulse ADC : 0.286865
+read!
+pulse ADC : 0.261719
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.274414
+read!
+pulse ADC : 0.300781
+read!
+pulse ADC : 0.315186
+read!
+pulse ADC : 0.304199
+read!
+pulse ADC : 0.274902
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.255371
+read!
+pulse ADC : 0.286865
+read!
+pulse ADC : 0.306641
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.294678
+read!
+pulse ADC : 0.266357
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.266357
+read!
+pulse ADC : 0.296875
+read!
+pulse ADC : 0.312744
+read!
+pulse ADC : 0.307617
+read!
+pulse ADC : 0.281494
+read!
+pulse ADC : 0.257324
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.278809
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.314209
+read!
+pulse ADC : 0.302246
+read!
+pulse ADC : 0.272461
+read!
+pulse ADC : 0.251221
+read!
+pulse ADC : 0.259277
+read!
+pulse ADC : 0.290771
+read!
+pulse ADC : 0.310547
+read!
+pulse ADC : 0.312500
+read!
+pulse ADC : 0.290771
+read!
+pulse ADC : 0.262695
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.268799
+read!
+pulse ADC : 0.299805
+read!
+pulse ADC : 0.314209
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.278320
+read!
+pulse ADC : 0.254883
+read!
+pulse ADC : 0.254639
+read!
+pulse ADC : 0.283936
+read!
+pulse ADC : 0.304688
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.297852
+read!
+pulse ADC : 0.268066
+read!
+pulse ADC : 0.251953
+read!
+pulse ADC : 0.263184
+read!
+pulse ADC : 0.294189
+read!
+pulse ADC : 0.312500
+read!
+pulse ADC : 0.310791
+read!
+pulse ADC : 0.287354
+read!
+pulse ADC : 0.260986
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.273682
+read!
+pulse ADC : 0.300781
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.302979
+read!
+pulse ADC : 0.272949
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.254150
+read!
+pulse ADC : 0.286133
+read!
+pulse ADC : 0.306152
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.294189
+read!
+pulse ADC : 0.265625
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.265625
+read!
+pulse ADC : 0.296143
+read!
+pulse ADC : 0.312988
+read!
+pulse ADC : 0.307373
+read!
+pulse ADC : 0.280273
+read!
+pulse ADC : 0.256104
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.277100
+read!
+pulse ADC : 0.302246
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.300049
+read!
+pulse ADC : 0.270752
+read!
+pulse ADC : 0.250244
+read!
+pulse ADC : 0.257568
+read!
+pulse ADC : 0.289795
+read!
+pulse ADC : 0.309814
+read!
+pulse ADC : 0.312012
+read!
+pulse ADC : 0.289307
+read!
+pulse ADC : 0.263184
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.270508
+read!
+pulse ADC : 0.300049
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.278076
+read!
+pulse ADC : 0.253418
+read!
+pulse ADC : 0.252930
+read!
+pulse ADC : 0.281494
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.267334
+read!
+pulse ADC : 0.250000
+read!
+pulse ADC : 0.260986
+read!
+pulse ADC : 0.292725
+read!
+pulse ADC : 0.312012
+read!
+pulse ADC : 0.308350
+read!
+pulse ADC : 0.284912
+read!
+pulse ADC : 0.260498
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.273926
+read!
+pulse ADC : 0.302490
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.304932
+read!
+pulse ADC : 0.273926
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.256836
+read!
+pulse ADC : 0.286865
+read!
+pulse ADC : 0.306641
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.292725
+read!
+pulse ADC : 0.264160
+read!
+pulse ADC : 0.250244
+read!
+pulse ADC : 0.266846
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.307617
+read!
+pulse ADC : 0.281494
+read!
+pulse ADC : 0.257324
+read!
+pulse ADC : 0.253174
+read!
+pulse ADC : 0.278320
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.300781
+read!
+pulse ADC : 0.271484
+read!
+pulse ADC : 0.251953
+read!
+pulse ADC : 0.259766
+read!
+pulse ADC : 0.290771
+read!
+pulse ADC : 0.310547
+read!
+pulse ADC : 0.312256
+read!
+pulse ADC : 0.290283
+read!
+pulse ADC : 0.263916
+read!
+pulse ADC : 0.250000
+read!
+pulse ADC : 0.270508
+read!
+pulse ADC : 0.299805
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.276611
+read!
+pulse ADC : 0.253662
+read!
+pulse ADC : 0.253174
+read!
+pulse ADC : 0.283447
+read!
+pulse ADC : 0.304932
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.296875
+read!
+pulse ADC : 0.267578
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.262695
+read!
+pulse ADC : 0.293945
+read!
+pulse ADC : 0.312256
+read!
+pulse ADC : 0.307861
+read!
+pulse ADC : 0.284912
+read!
+pulse ADC : 0.260498
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.274902
+read!
+pulse ADC : 0.301514
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.303467
+read!
+pulse ADC : 0.273682
+read!
+pulse ADC : 0.252441
+read!
+pulse ADC : 0.257324
+read!
+pulse ADC : 0.288330
+read!
+pulse ADC : 0.307861
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.293457
+read!
+pulse ADC : 0.264893
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.266357
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.280029
+read!
+pulse ADC : 0.255371
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.278809
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.300049
+read!
+pulse ADC : 0.268799
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.258545
+read!
+pulse ADC : 0.290771
+read!
+pulse ADC : 0.311279
+read!
+pulse ADC : 0.312256
+read!
+pulse ADC : 0.289307
+read!
+pulse ADC : 0.263428
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.271973
+read!
+pulse ADC : 0.300537
+read!
+pulse ADC : 0.314209
+read!
+pulse ADC : 0.306152
+read!
+pulse ADC : 0.276611
+read!
+pulse ADC : 0.253174
+read!
+pulse ADC : 0.254639
+read!
+pulse ADC : 0.283936
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.296875
+read!
+pulse ADC : 0.266357
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.262695
+read!
+pulse ADC : 0.294189
+read!
+pulse ADC : 0.312500
+read!
+pulse ADC : 0.309326
+read!
+pulse ADC : 0.284912
+read!
+pulse ADC : 0.259766
+read!
+pulse ADC : 0.251221
+read!
+pulse ADC : 0.276123
+read!
+pulse ADC : 0.301758
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.302734
+read!
+pulse ADC : 0.271973
+read!
+pulse ADC : 0.252441
+read!
+pulse ADC : 0.256836
+read!
+pulse ADC : 0.288086
+read!
+pulse ADC : 0.307861
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.293457
+read!
+pulse ADC : 0.264404
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.268066
+read!
+pulse ADC : 0.297852
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.307861
+read!
+pulse ADC : 0.280273
+read!
+pulse ADC : 0.255371
+read!
+pulse ADC : 0.252441
+read!
+pulse ADC : 0.280273
+read!
+pulse ADC : 0.304199
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.300537
+read!
+pulse ADC : 0.270508
+read!
+pulse ADC : 0.251221
+read!
+pulse ADC : 0.260742
+read!
+pulse ADC : 0.291260
+read!
+pulse ADC : 0.311279
+read!
+pulse ADC : 0.310791
+read!
+pulse ADC : 0.289307
+read!
+pulse ADC : 0.262695
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.271973
+read!
+pulse ADC : 0.300537
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.306152
+read!
+pulse ADC : 0.276611
+read!
+pulse ADC : 0.253662
+read!
+pulse ADC : 0.254883
+read!
+pulse ADC : 0.284912
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.296387
+read!
+pulse ADC : 0.266846
+read!
+pulse ADC : 0.251221
+read!
+pulse ADC : 0.264160
+read!
+pulse ADC : 0.296875
+read!
+pulse ADC : 0.313232
+read!
+pulse ADC : 0.309570
+read!
+pulse ADC : 0.284912
+read!
+pulse ADC : 0.260986
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.277100
+read!
+pulse ADC : 0.302979
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.304199
+read!
+pulse ADC : 0.273682
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.258301
+read!
+pulse ADC : 0.288330
+read!
+pulse ADC : 0.307617
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.292725
+read!
+pulse ADC : 0.264160
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.268066
+read!
+pulse ADC : 0.299072
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.307617
+read!
+pulse ADC : 0.280273
+read!
+pulse ADC : 0.254883
+read!
+pulse ADC : 0.253662
+read!
+pulse ADC : 0.280273
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.299072
+read!
+pulse ADC : 0.270020
+read!
+pulse ADC : 0.250244
+read!
+pulse ADC : 0.260742
+read!
+pulse ADC : 0.292725
+read!
+pulse ADC : 0.311279
+read!
+pulse ADC : 0.310791
+read!
+pulse ADC : 0.287598
+read!
+pulse ADC : 0.261719
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.272949
+read!
+pulse ADC : 0.300781
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.306152
+read!
+pulse ADC : 0.276367
+read!
+pulse ADC : 0.253418
+read!
+pulse ADC : 0.255127
+read!
+pulse ADC : 0.286133
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.294922
+read!
+pulse ADC : 0.266846
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.263428
+read!
+pulse ADC : 0.296387
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.307617
+read!
+pulse ADC : 0.283936
+read!
+pulse ADC : 0.259277
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.276123
+read!
+pulse ADC : 0.302246
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.301270
+read!
+pulse ADC : 0.271973
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.257568
+read!
+pulse ADC : 0.289307
+read!
+pulse ADC : 0.308350
+read!
+pulse ADC : 0.313232
+read!
+pulse ADC : 0.292725
+read!
+pulse ADC : 0.264893
+read!
+pulse ADC : 0.251221
+read!
+pulse ADC : 0.270020
+read!
+pulse ADC : 0.298584
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.306641
+read!
+pulse ADC : 0.278320
+read!
+pulse ADC : 0.254883
+read!
+pulse ADC : 0.253662
+read!
+pulse ADC : 0.280273
+read!
+pulse ADC : 0.304199
+read!
+pulse ADC : 0.314209
+read!
+pulse ADC : 0.299316
+read!
+pulse ADC : 0.268311
+read!
+pulse ADC : 0.250244
+read!
+pulse ADC : 0.260254
+read!
+pulse ADC : 0.291504
+read!
+pulse ADC : 0.310791
+read!
+pulse ADC : 0.310547
+read!
+pulse ADC : 0.286865
+read!
+pulse ADC : 0.261475
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.272949
+read!
+pulse ADC : 0.300049
+read!
+pulse ADC : 0.313232
+read!
+pulse ADC : 0.304932
+read!
+pulse ADC : 0.275391
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.253418
+read!
+pulse ADC : 0.283936
+read!
+pulse ADC : 0.304932
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.293945
+read!
+pulse ADC : 0.265625
+read!
+pulse ADC : 0.250000
+read!
+pulse ADC : 0.263184
+read!
+pulse ADC : 0.294189
+read!
+pulse ADC : 0.311279
+read!
+pulse ADC : 0.307129
+read!
+pulse ADC : 0.282715
+read!
+pulse ADC : 0.258301
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.275146
+read!
+pulse ADC : 0.302246
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.301025
+read!
+pulse ADC : 0.271973
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.257568
+read!
+pulse ADC : 0.289307
+read!
+pulse ADC : 0.309326
+read!
+pulse ADC : 0.312988
+read!
+pulse ADC : 0.291504
+read!
+pulse ADC : 0.264160
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.269043
+read!
+pulse ADC : 0.299316
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.278809
+read!
+pulse ADC : 0.254883
+read!
+pulse ADC : 0.253662
+read!
+pulse ADC : 0.281494
+read!
+pulse ADC : 0.304932
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.299316
+read!
+pulse ADC : 0.269043
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.261719
+read!
+pulse ADC : 0.292725
+read!
+pulse ADC : 0.312012
+read!
+pulse ADC : 0.309814
+read!
+pulse ADC : 0.285889
+read!
+pulse ADC : 0.261475
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.272949
+read!
+pulse ADC : 0.301270
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.274902
+read!
+pulse ADC : 0.254150
+read!
+pulse ADC : 0.255127
+read!
+pulse ADC : 0.286133
+read!
+pulse ADC : 0.306641
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.294922
+read!
+pulse ADC : 0.266357
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.265625
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.307617
+read!
+pulse ADC : 0.281738
+read!
+pulse ADC : 0.258301
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.276611
+read!
+pulse ADC : 0.302979
+read!
+pulse ADC : 0.315186
+read!
+pulse ADC : 0.302246
+read!
+pulse ADC : 0.271240
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.257568
+read!
+pulse ADC : 0.289307
+read!
+pulse ADC : 0.307861
+read!
+pulse ADC : 0.312500
+read!
+pulse ADC : 0.290283
+read!
+pulse ADC : 0.263184
+read!
+pulse ADC : 0.251221
+read!
+pulse ADC : 0.267334
+read!
+pulse ADC : 0.297852
+read!
+pulse ADC : 0.312988
+read!
+pulse ADC : 0.306641
+read!
+pulse ADC : 0.277344
+read!
+pulse ADC : 0.252930
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.280762
+read!
+pulse ADC : 0.303467
+read!
+pulse ADC : 0.314209
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.267090
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.260986
+read!
+pulse ADC : 0.292725
+read!
+pulse ADC : 0.311279
+read!
+pulse ADC : 0.310059
+read!
+pulse ADC : 0.286865
+read!
+pulse ADC : 0.260986
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.273193
+read!
+pulse ADC : 0.300049
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.304199
+read!
+pulse ADC : 0.273926
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.254883
+E (1645432) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:
+E (1645432) task_wdt:  - IDLE1 (CPU 1)
+E (1645432) task_wdt: Tasks currently running:
+E (1645432) task_wdt: CPU 0: IDLE0
+E (1645432) task_wdt: CPU 1: PulseProcessTas
+E (1645432) task_wdt: Print CPU 1 backtrace
+
+
+Backtrace: 0x40377E96:0x3FC9E2E0 0x40377769:0x3FC9E300 0x4200BFAE:0x3FCAAE00 0x4200C729:0x3FCAAE30 0x4200F995:0x3FCAAE60 0x420081AA:0x3FCAAE80 0x4200224C:0x3FCAAEA0 0x4200F995:0x3FCAAEC0 0x420081AA:0x3FCAAEE0 0x4209E265:0x3FCAAF00 0x42097F0E:0x3FCAAF30 0x420981B5:0x3FCAAF50 0x420108D5:0x3FCAAF70 0x4201090D:0x3FCAAFA0 0x4201145A:0x3FCAAFD0 0x4201149D:0x3FCAB000 0x40380F81:0x3FCAB020
+
+read!
+pulse ADC : 0.448242
+read!
+pulse ADC : 0.378418
+read!
+pulse ADC : 0.359863
+read!
+pulse ADC : 0.350830
+read!
+pulse ADC : 0.329590
+read!
+pulse ADC : 0.294189
+read!
+pulse ADC : 0.264160
+read!
+pulse ADC : 0.254639
+read!
+pulse ADC : 0.279053
+read!
+pulse ADC : 0.304199
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.301514
+read!
+pulse ADC : 0.272949
+read!
+pulse ADC : 0.251953
+read!
+pulse ADC : 0.259277
+read!
+pulse ADC : 0.290283
+read!
+pulse ADC : 0.309814
+read!
+pulse ADC : 0.312744
+read!
+pulse ADC : 0.291260
+read!
+pulse ADC : 0.263916
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.270508
+read!
+pulse ADC : 0.300049
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.306641
+read!
+pulse ADC : 0.277344
+read!
+pulse ADC : 0.254150
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.281006
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.267578
+read!
+pulse ADC : 0.248535
+read!
+pulse ADC : 0.262451
+read!
+pulse ADC : 0.292725
+read!
+pulse ADC : 0.310547
+read!
+pulse ADC : 0.310303
+read!
+pulse ADC : 0.286133
+read!
+pulse ADC : 0.260498
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.274658
+read!
+pulse ADC : 0.301270
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.304932
+read!
+pulse ADC : 0.274658
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.254639
+read!
+pulse ADC : 0.286377
+read!
+pulse ADC : 0.306641
+read!
+pulse ADC : 0.312988
+read!
+pulse ADC : 0.294189
+read!
+pulse ADC : 0.265381
+read!
+pulse ADC : 0.249268
+read!
+pulse ADC : 0.265625
+read!
+pulse ADC : 0.296875
+read!
+pulse ADC : 0.312500
+read!
+pulse ADC : 0.307861
+read!
+pulse ADC : 0.281494
+read!
+pulse ADC : 0.257324
+read!
+pulse ADC : 0.250000
+read!
+pulse ADC : 0.277344
+read!
+pulse ADC : 0.302979
+read!
+pulse ADC : 0.313232
+read!
+pulse ADC : 0.301270
+read!
+pulse ADC : 0.270752
+read!
+pulse ADC : 0.249268
+read!
+pulse ADC : 0.258301
+read!
+pulse ADC : 0.290771
+read!
+pulse ADC : 0.310059
+read!
+pulse ADC : 0.312256
+read!
+pulse ADC : 0.290771
+read!
+pulse ADC : 0.264160
+read!
+pulse ADC : 0.251221
+read!
+pulse ADC : 0.271973
+read!
+pulse ADC : 0.300049
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.307129
+read!
+pulse ADC : 0.278076
+read!
+pulse ADC : 0.253174
+read!
+pulse ADC : 0.252441
+read!
+pulse ADC : 0.283203
+read!
+pulse ADC : 0.304688
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.266846
+read!
+pulse ADC : 0.248535
+read!
+pulse ADC : 0.261719
+read!
+pulse ADC : 0.293457
+read!
+pulse ADC : 0.311279
+read!
+pulse ADC : 0.309814
+read!
+pulse ADC : 0.286865
+read!
+pulse ADC : 0.261719
+read!
+pulse ADC : 0.251221
+read!
+pulse ADC : 0.275391
+read!
+pulse ADC : 0.302246
+read!
+pulse ADC : 0.315186
+read!
+pulse ADC : 0.304932
+read!
+pulse ADC : 0.274658
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.254883
+read!
+pulse ADC : 0.287354
+read!
+pulse ADC : 0.307129
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.292969
+read!
+pulse ADC : 0.264160
+read!
+pulse ADC : 0.248779
+read!
+pulse ADC : 0.266357
+read!
+pulse ADC : 0.296143
+read!
+pulse ADC : 0.312256
+read!
+pulse ADC : 0.307617
+read!
+pulse ADC : 0.280029
+read!
+pulse ADC : 0.255371
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.278320
+read!
+pulse ADC : 0.303467
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.300537
+read!
+pulse ADC : 0.271240
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.260254
+read!
+pulse ADC : 0.290771
+read!
+pulse ADC : 0.310059
+read!
+pulse ADC : 0.310791
+read!
+pulse ADC : 0.289307
+read!
+pulse ADC : 0.262695
+read!
+pulse ADC : 0.250244
+read!
+pulse ADC : 0.270996
+read!
+pulse ADC : 0.299316
+read!
+pulse ADC : 0.312988
+read!
+pulse ADC : 0.306152
+read!
+pulse ADC : 0.276611
+read!
+pulse ADC : 0.252441
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.283936
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.267578
+read!
+pulse ADC : 0.250244
+read!
+pulse ADC : 0.263428
+read!
+pulse ADC : 0.294678
+read!
+pulse ADC : 0.312500
+read!
+pulse ADC : 0.310547
+read!
+pulse ADC : 0.286133
+read!
+pulse ADC : 0.261719
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.276123
+read!
+pulse ADC : 0.302734
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.304688
+read!
+pulse ADC : 0.273682
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.256836
+read!
+pulse ADC : 0.288086
+read!
+pulse ADC : 0.306152
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.293457
+read!
+pulse ADC : 0.264160
+read!
+pulse ADC : 0.250244
+read!
+pulse ADC : 0.267334
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.312988
+read!
+pulse ADC : 0.307861
+read!
+pulse ADC : 0.281494
+read!
+pulse ADC : 0.257324
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.279541
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.315186
+read!
+pulse ADC : 0.300537
+read!
+pulse ADC : 0.270508
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.259766
+read!
+pulse ADC : 0.291260
+read!
+pulse ADC : 0.311279
+read!
+pulse ADC : 0.312500
+read!
+pulse ADC : 0.289062
+read!
+pulse ADC : 0.263428
+read!
+pulse ADC : 0.251221
+read!
+pulse ADC : 0.273438
+read!
+pulse ADC : 0.300537
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.306152
+read!
+pulse ADC : 0.276611
+read!
+pulse ADC : 0.253174
+read!
+pulse ADC : 0.254883
+read!
+pulse ADC : 0.284912
+read!
+pulse ADC : 0.304688
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.268311
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.266357
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.311279
+read!
+pulse ADC : 0.286865
+read!
+pulse ADC : 0.261719
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.276611
+read!
+pulse ADC : 0.303223
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.304199
+read!
+pulse ADC : 0.275146
+read!
+pulse ADC : 0.253174
+read!
+pulse ADC : 0.258301
+read!
+pulse ADC : 0.290283
+read!
+pulse ADC : 0.310303
+read!
+pulse ADC : 0.314209
+read!
+pulse ADC : 0.293945
+read!
+pulse ADC : 0.264893
+read!
+pulse ADC : 0.249268
+read!
+pulse ADC : 0.267334
+read!
+pulse ADC : 0.296875
+read!
+pulse ADC : 0.310791
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.278809
+read!
+pulse ADC : 0.254639
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.280273
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.300537
+read!
+pulse ADC : 0.270508
+read!
+pulse ADC : 0.249268
+read!
+pulse ADC : 0.260986
+read!
+pulse ADC : 0.291260
+read!
+pulse ADC : 0.310303
+read!
+pulse ADC : 0.310547
+read!
+pulse ADC : 0.288086
+read!
+pulse ADC : 0.260986
+read!
+pulse ADC : 0.249268
+read!
+pulse ADC : 0.272949
+read!
+pulse ADC : 0.300049
+read!
+pulse ADC : 0.312744
+read!
+pulse ADC : 0.306152
+read!
+pulse ADC : 0.276123
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.253662
+read!
+pulse ADC : 0.284912
+read!
+pulse ADC : 0.304932
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.267334
+read!
+pulse ADC : 0.249268
+read!
+pulse ADC : 0.265625
+read!
+pulse ADC : 0.296875
+read!
+pulse ADC : 0.312256
+read!
+pulse ADC : 0.310547
+read!
+pulse ADC : 0.284912
+read!
+pulse ADC : 0.259766
+read!
+pulse ADC : 0.249268
+read!
+pulse ADC : 0.276611
+read!
+pulse ADC : 0.301514
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.304932
+read!
+pulse ADC : 0.273682
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.258545
+read!
+pulse ADC : 0.289062
+read!
+pulse ADC : 0.307373
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.293457
+read!
+pulse ADC : 0.264893
+read!
+pulse ADC : 0.250000
+read!
+pulse ADC : 0.270752
+read!
+pulse ADC : 0.299316
+read!
+pulse ADC : 0.313232
+read!
+pulse ADC : 0.309326
+read!
+pulse ADC : 0.280273
+read!
+pulse ADC : 0.255371
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.281494
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.314209
+read!
+pulse ADC : 0.300781
+read!
+pulse ADC : 0.270508
+read!
+pulse ADC : 0.250000
+read!
+pulse ADC : 0.261719
+read!
+pulse ADC : 0.292725
+read!
+pulse ADC : 0.310547
+read!
+pulse ADC : 0.310547
+read!
+pulse ADC : 0.287598
+read!
+pulse ADC : 0.261719
+read!
+pulse ADC : 0.249268
+read!
+pulse ADC : 0.273926
+read!
+pulse ADC : 0.300781
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.306152
+read!
+pulse ADC : 0.276123
+read!
+pulse ADC : 0.251953
+read!
+pulse ADC : 0.254883
+read!
+pulse ADC : 0.286865
+read!
+pulse ADC : 0.306641
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.267334
+read!
+pulse ADC : 0.250000
+read!
+pulse ADC : 0.266113
+read!
+pulse ADC : 0.294922
+read!
+pulse ADC : 0.312012
+read!
+pulse ADC : 0.309814
+read!
+pulse ADC : 0.283936
+read!
+pulse ADC : 0.259277
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.278076
+read!
+pulse ADC : 0.302979
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.302246
+read!
+pulse ADC : 0.271240
+read!
+pulse ADC : 0.248535
+read!
+pulse ADC : 0.258057
+read!
+pulse ADC : 0.288086
+read!
+pulse ADC : 0.307373
+read!
+pulse ADC : 0.311279
+read!
+pulse ADC : 0.291260
+read!
+pulse ADC : 0.264160
+read!
+pulse ADC : 0.248535
+read!
+pulse ADC : 0.268311
+read!
+pulse ADC : 0.297852
+read!
+pulse ADC : 0.312256
+read!
+pulse ADC : 0.307129
+read!
+pulse ADC : 0.278809
+read!
+pulse ADC : 0.253662
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.279297
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.297852
+read!
+pulse ADC : 0.268066
+read!
+pulse ADC : 0.249268
+read!
+pulse ADC : 0.260986
+read!
+pulse ADC : 0.291504
+read!
+pulse ADC : 0.310303
+read!
+pulse ADC : 0.310059
+read!
+pulse ADC : 0.286865
+read!
+pulse ADC : 0.260986
+read!
+pulse ADC : 0.248779
+read!
+pulse ADC : 0.271973
+read!
+pulse ADC : 0.299316
+read!
+pulse ADC : 0.312988
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.275391
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.254639
+read!
+pulse ADC : 0.286865
+read!
+pulse ADC : 0.306152
+read!
+pulse ADC : 0.314209
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.267090
+read!
+pulse ADC : 0.250000
+read!
+pulse ADC : 0.265625
+read!
+pulse ADC : 0.296875
+read!
+pulse ADC : 0.313232
+read!
+pulse ADC : 0.310547
+read!
+pulse ADC : 0.283936
+read!
+pulse ADC : 0.259277
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.277100
+read!
+pulse ADC : 0.303223
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.302490
+read!
+pulse ADC : 0.272949
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.260010
+read!
+pulse ADC : 0.290771
+read!
+pulse ADC : 0.310303
+read!
+pulse ADC : 0.312988
+read!
+pulse ADC : 0.292725
+read!
+pulse ADC : 0.263428
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.270508
+read!
+pulse ADC : 0.297852
+read!
+pulse ADC : 0.312988
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.278320
+read!
+pulse ADC : 0.254150
+read!
+pulse ADC : 0.253662
+read!
+pulse ADC : 0.281738
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.300049
+read!
+pulse ADC : 0.269043
+read!
+pulse ADC : 0.250000
+read!
+pulse ADC : 0.264160
+read!
+pulse ADC : 0.294189
+read!
+pulse ADC : 0.312012
+read!
+pulse ADC : 0.311279
+read!
+pulse ADC : 0.287354
+read!
+pulse ADC : 0.261719
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.275391
+read!
+pulse ADC : 0.301514
+read!
+pulse ADC : 0.314209
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.275146
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.256836
+read!
+pulse ADC : 0.287354
+read!
+pulse ADC : 0.306641
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.294922
+read!
+pulse ADC : 0.265381
+read!
+pulse ADC : 0.249268
+read!
+pulse ADC : 0.265869
+read!
+pulse ADC : 0.296143
+read!
+pulse ADC : 0.312256
+read!
+pulse ADC : 0.309814
+read!
+pulse ADC : 0.284424
+read!
+pulse ADC : 0.259766
+read!
+pulse ADC : 0.252930
+read!
+pulse ADC : 0.279541
+read!
+pulse ADC : 0.304199
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.272949
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.260986
+read!
+pulse ADC : 0.291260
+read!
+pulse ADC : 0.310303
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.291504
+read!
+pulse ADC : 0.264404
+read!
+pulse ADC : 0.250244
+read!
+pulse ADC : 0.273193
+read!
+pulse ADC : 0.300781
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.309326
+read!
+pulse ADC : 0.280029
+read!
+pulse ADC : 0.254883
+read!
+pulse ADC : 0.254639
+read!
+pulse ADC : 0.284912
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.300537
+read!
+pulse ADC : 0.270508
+read!
+pulse ADC : 0.250244
+read!
+pulse ADC : 0.264160
+read!
+pulse ADC : 0.294678
+read!
+pulse ADC : 0.312988
+read!
+pulse ADC : 0.312256
+read!
+pulse ADC : 0.288086
+read!
+pulse ADC : 0.262695
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.276611
+read!
+pulse ADC : 0.302734
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.275391
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.257324
+read!
+pulse ADC : 0.287354
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.294922
+read!
+pulse ADC : 0.265381
+read!
+pulse ADC : 0.249268
+read!
+pulse ADC : 0.266846
+read!
+pulse ADC : 0.296875
+read!
+pulse ADC : 0.312256
+read!
+pulse ADC : 0.309570
+read!
+pulse ADC : 0.283203
+read!
+pulse ADC : 0.257324
+read!
+pulse ADC : 0.250000
+read!
+pulse ADC : 0.278320
+read!
+pulse ADC : 0.303467
+read!
+pulse ADC : 0.313232
+read!
+pulse ADC : 0.301270
+read!
+pulse ADC : 0.270752
+read!
+pulse ADC : 0.248779
+read!
+pulse ADC : 0.260254
+read!
+pulse ADC : 0.290771
+read!
+pulse ADC : 0.309814
+read!
+pulse ADC : 0.312500
+read!
+pulse ADC : 0.290771
+read!
+pulse ADC : 0.263184
+read!
+pulse ADC : 0.249268
+read!
+pulse ADC : 0.272949
+read!
+pulse ADC : 0.300537
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.307129
+read!
+pulse ADC : 0.278320
+read!
+pulse ADC : 0.253906
+read!
+pulse ADC : 0.253906
+read!
+pulse ADC : 0.284424
+read!
+pulse ADC : 0.306152
+read!
+pulse ADC : 0.315186
+read!
+pulse ADC : 0.299072
+read!
+pulse ADC : 0.267578
+read!
+pulse ADC : 0.249268
+read!
+pulse ADC : 0.264404
+read!
+pulse ADC : 0.294922
+read!
+pulse ADC : 0.312256
+read!
+pulse ADC : 0.311279
+read!
+pulse ADC : 0.286865
+read!
+pulse ADC : 0.261719
+read!
+pulse ADC : 0.250000
+read!
+pulse ADC : 0.276611
+read!
+pulse ADC : 0.302246
+read!
+pulse ADC : 0.312988
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.273926
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.255371
+read!
+pulse ADC : 0.286865
+read!
+pulse ADC : 0.306641
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.293457
+read!
+pulse ADC : 0.264893
+read!
+pulse ADC : 0.250000
+read!
+pulse ADC : 0.265625
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.313232
+read!
+pulse ADC : 0.307861
+read!
+pulse ADC : 0.283447
+read!
+pulse ADC : 0.258301
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.278809
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.301270
+read!
+pulse ADC : 0.270508
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.260254
+read!
+pulse ADC : 0.291260
+read!
+pulse ADC : 0.310059
+read!
+pulse ADC : 0.311279
+read!
+pulse ADC : 0.290771
+read!
+pulse ADC : 0.263428
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.272461
+read!
+pulse ADC : 0.300049
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.307129
+read!
+pulse ADC : 0.278076
+read!
+pulse ADC : 0.253418
+read!
+pulse ADC : 0.254150
+read!
+pulse ADC : 0.284424
+read!
+pulse ADC : 0.306152
+read!
+pulse ADC : 0.315918
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.268555
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.263428
+read!
+pulse ADC : 0.294189
+read!
+pulse ADC : 0.312744
+read!
+pulse ADC : 0.310547
+read!
+pulse ADC : 0.285889
+read!
+pulse ADC : 0.260986
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.276123
+read!
+pulse ADC : 0.301270
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.304199
+read!
+pulse ADC : 0.273682
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.257324
+read!
+pulse ADC : 0.288086
+read!
+pulse ADC : 0.307129
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.293457
+read!
+pulse ADC : 0.264404
+read!
+pulse ADC : 0.250244
+read!
+pulse ADC : 0.267578
+read!
+pulse ADC : 0.297852
+read!
+pulse ADC : 0.312256
+read!
+pulse ADC : 0.307617
+read!
+pulse ADC : 0.281250
+read!
+pulse ADC : 0.256104
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.279541
+read!
+pulse ADC : 0.304199
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.300049
+read!
+pulse ADC : 0.269043
+read!
+pulse ADC : 0.250244
+read!
+pulse ADC : 0.260010
+read!
+pulse ADC : 0.291260
+read!
+pulse ADC : 0.310303
+read!
+pulse ADC : 0.311279
+read!
+pulse ADC : 0.289307
+read!
+pulse ADC : 0.262695
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.273438
+read!
+pulse ADC : 0.300537
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.307129
+read!
+pulse ADC : 0.276611
+read!
+pulse ADC : 0.253174
+read!
+pulse ADC : 0.254150
+read!
+pulse ADC : 0.284912
+read!
+pulse ADC : 0.306152
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.266846
+read!
+pulse ADC : 0.248779
+read!
+pulse ADC : 0.264893
+read!
+pulse ADC : 0.294922
+read!
+pulse ADC : 0.312744
+read!
+pulse ADC : 0.310791
+read!
+pulse ADC : 0.285400
+read!
+pulse ADC : 0.260742
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.277100
+read!
+pulse ADC : 0.302246
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.273682
+read!
+pulse ADC : 0.251221
+read!
+pulse ADC : 0.257324
+read!
+pulse ADC : 0.288330
+read!
+pulse ADC : 0.307373
+read!
+pulse ADC : 0.313232
+read!
+pulse ADC : 0.293457
+read!
+pulse ADC : 0.264893
+read!
+pulse ADC : 0.250244
+read!
+pulse ADC : 0.268066
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.312256
+read!
+pulse ADC : 0.307617
+read!
+pulse ADC : 0.279541
+read!
+pulse ADC : 0.254639
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.278320
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.300049
+read!
+pulse ADC : 0.270508
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.260742
+read!
+pulse ADC : 0.291992
+read!
+pulse ADC : 0.310547
+read!
+pulse ADC : 0.312012
+read!
+pulse ADC : 0.289795
+read!
+pulse ADC : 0.263184
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.273682
+read!
+pulse ADC : 0.300781
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.277100
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.254639
+read!
+pulse ADC : 0.286133
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.314209
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.267334
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.264893
+read!
+pulse ADC : 0.294922
+read!
+pulse ADC : 0.312744
+read!
+pulse ADC : 0.309814
+read!
+pulse ADC : 0.284668
+read!
+pulse ADC : 0.260010
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.277100
+read!
+pulse ADC : 0.302734
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.273682
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.259277
+read!
+pulse ADC : 0.289307
+read!
+pulse ADC : 0.307861
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.293457
+read!
+pulse ADC : 0.264160
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.269043
+read!
+pulse ADC : 0.297852
+read!
+pulse ADC : 0.312256
+read!
+pulse ADC : 0.307129
+read!
+pulse ADC : 0.280029
+read!
+pulse ADC : 0.254639
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.280762
+read!
+pulse ADC : 0.304199
+read!
+pulse ADC : 0.313232
+read!
+pulse ADC : 0.299805
+read!
+pulse ADC : 0.270508
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.261719
+read!
+pulse ADC : 0.292969
+read!
+pulse ADC : 0.312012
+read!
+pulse ADC : 0.311279
+read!
+pulse ADC : 0.288330
+read!
+pulse ADC : 0.263184
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.273682
+read!
+pulse ADC : 0.301270
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.275146
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.253418
+read!
+pulse ADC : 0.284668
+read!
+pulse ADC : 0.304932
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.296143
+read!
+pulse ADC : 0.266357
+read!
+pulse ADC : 0.249268
+read!
+pulse ADC : 0.265625
+read!
+pulse ADC : 0.296875
+read!
+pulse ADC : 0.313232
+read!
+pulse ADC : 0.310303
+read!
+pulse ADC : 0.283936
+read!
+pulse ADC : 0.258545
+read!
+pulse ADC : 0.249268
+read!
+pulse ADC : 0.275391
+read!
+pulse ADC : 0.301270
+read!
+pulse ADC : 0.312500
+read!
+pulse ADC : 0.302246
+read!
+pulse ADC : 0.271973
+read!
+pulse ADC : 0.249268
+read!
+pulse ADC : 0.257568
+read!
+pulse ADC : 0.289307
+read!
+pulse ADC : 0.309326
+read!
+pulse ADC : 0.313232
+read!
+pulse ADC : 0.292725
+read!
+pulse ADC : 0.264404
+read!
+pulse ADC : 0.249268
+read!
+pulse ADC : 0.270020
+read!
+pulse ADC : 0.299072
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.279541
+read!
+pulse ADC : 0.254639
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.280762
+read!
+pulse ADC : 0.304199
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.299316
+read!
+pulse ADC : 0.268311
+read!
+pulse ADC : 0.250244
+read!
+pulse ADC : 0.260986
+read!
+pulse ADC : 0.292725
+read!
+pulse ADC : 0.311279
+read!
+pulse ADC : 0.311279
+read!
+pulse ADC : 0.287598
+read!
+pulse ADC : 0.261719
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.274414
+read!
+pulse ADC : 0.301025
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.306152
+read!
+pulse ADC : 0.276367
+read!
+pulse ADC : 0.253174
+read!
+pulse ADC : 0.254883
+read!
+pulse ADC : 0.286133
+read!
+pulse ADC : 0.306152
+read!
+pulse ADC : 0.315186
+read!
+pulse ADC : 0.296143
+read!
+pulse ADC : 0.266846
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.264893
+read!
+pulse ADC : 0.296143
+read!
+pulse ADC : 0.312744
+read!
+pulse ADC : 0.307373
+read!
+pulse ADC : 0.281738
+read!
+pulse ADC : 0.258301
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.278076
+read!
+pulse ADC : 0.302979
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.301514
+read!
+pulse ADC : 0.271484
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.259277
+read!
+pulse ADC : 0.288330
+read!
+pulse ADC : 0.307861
+read!
+pulse ADC : 0.312500
+read!
+pulse ADC : 0.290771
+read!
+pulse ADC : 0.262695
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.268555
+read!
+pulse ADC : 0.297852
+read!
+pulse ADC : 0.313232
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.278320
+read!
+pulse ADC : 0.253662
+read!
+pulse ADC : 0.252441
+read!
+pulse ADC : 0.280762
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.298096
+read!
+pulse ADC : 0.268311
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.262695
+read!
+pulse ADC : 0.293457
+read!
+pulse ADC : 0.312500
+read!
+pulse ADC : 0.310547
+read!
+pulse ADC : 0.288086
+read!
+pulse ADC : 0.262695
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.275391
+read!
+pulse ADC : 0.301025
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.304932
+read!
+pulse ADC : 0.275146
+read!
+pulse ADC : 0.253174
+read!
+pulse ADC : 0.255127
+read!
+pulse ADC : 0.286865
+read!
+pulse ADC : 0.307129
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.296875
+read!
+pulse ADC : 0.267090
+read!
+pulse ADC : 0.250244
+read!
+pulse ADC : 0.265381
+read!
+pulse ADC : 0.294922
+read!
+pulse ADC : 0.312500
+read!
+pulse ADC : 0.307129
+read!
+pulse ADC : 0.281494
+read!
+pulse ADC : 0.257568
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.277344
+read!
+pulse ADC : 0.302734
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.302734
+read!
+pulse ADC : 0.271240
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.258301
+read!
+pulse ADC : 0.289307
+read!
+pulse ADC : 0.309570
+read!
+pulse ADC : 0.312988
+read!
+pulse ADC : 0.290771
+read!
+pulse ADC : 0.263184
+read!
+pulse ADC : 0.250000
+read!
+pulse ADC : 0.270508
+read!
+pulse ADC : 0.299316
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.278076
+read!
+pulse ADC : 0.253906
+read!
+pulse ADC : 0.253906
+read!
+pulse ADC : 0.283447
+read!
+pulse ADC : 0.304932
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.299072
+read!
+pulse ADC : 0.269043
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.261719
+read!
+pulse ADC : 0.292725
+read!
+pulse ADC : 0.310547
+read!
+pulse ADC : 0.309326
+read!
+pulse ADC : 0.286133
+read!
+pulse ADC : 0.260498
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.273682
+read!
+pulse ADC : 0.300781
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.304199
+read!
+pulse ADC : 0.273926
+read!
+pulse ADC : 0.251221
+read!
+pulse ADC : 0.255127
+read!
+pulse ADC : 0.287354
+read!
+pulse ADC : 0.307129
+read!
+pulse ADC : 0.315186
+read!
+pulse ADC : 0.294189
+read!
+pulse ADC : 0.266602
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.266602
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.313232
+read!
+pulse ADC : 0.309326
+read!
+pulse ADC : 0.283203
+read!
+pulse ADC : 0.258301
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.278076
+read!
+pulse ADC : 0.303467
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.300537
+read!
+pulse ADC : 0.271240
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.258545
+read!
+pulse ADC : 0.291260
+read!
+pulse ADC : 0.310059
+read!
+pulse ADC : 0.312012
+read!
+pulse ADC : 0.289307
+read!
+pulse ADC : 0.262451
+read!
+pulse ADC : 0.250000
+read!
+pulse ADC : 0.268311
+read!
+pulse ADC : 0.299316
+read!
+pulse ADC : 0.313232
+read!
+pulse ADC : 0.306152
+read!
+pulse ADC : 0.277344
+read!
+pulse ADC : 0.254639
+read!
+pulse ADC : 0.254883
+read!
+pulse ADC : 0.284912
+read!
+pulse ADC : 0.306641
+read!
+pulse ADC : 0.316162
+read!
+pulse ADC : 0.298584
+read!
+pulse ADC : 0.268066
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.261719
+read!
+pulse ADC : 0.293945
+read!
+pulse ADC : 0.312256
+read!
+pulse ADC : 0.310059
+read!
+pulse ADC : 0.286865
+read!
+pulse ADC : 0.262451
+read!
+pulse ADC : 0.251953
+read!
+pulse ADC : 0.275391
+read!
+pulse ADC : 0.302246
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.304199
+read!
+pulse ADC : 0.274414
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.255371
+read!
+pulse ADC : 0.287598
+read!
+pulse ADC : 0.307129
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.294189
+read!
+pulse ADC : 0.265381
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.266602
+read!
+pulse ADC : 0.296875
+read!
+pulse ADC : 0.312988
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.280273
+read!
+pulse ADC : 0.256104
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.278076
+read!
+pulse ADC : 0.303467
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.301270
+read!
+pulse ADC : 0.271240
+read!
+pulse ADC : 0.250244
+read!
+pulse ADC : 0.258301
+read!
+pulse ADC : 0.290283
+read!
+pulse ADC : 0.310059
+read!
+pulse ADC : 0.312012
+read!
+pulse ADC : 0.288330
+read!
+pulse ADC : 0.261719
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.271240
+read!
+pulse ADC : 0.300049
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.307129
+read!
+pulse ADC : 0.278076
+read!
+pulse ADC : 0.253906
+read!
+pulse ADC : 0.254150
+read!
+pulse ADC : 0.283936
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.268066
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.263184
+read!
+pulse ADC : 0.294189
+read!
+pulse ADC : 0.312744
+read!
+pulse ADC : 0.309814
+read!
+pulse ADC : 0.284668
+read!
+pulse ADC : 0.260742
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.275146
+read!
+pulse ADC : 0.301514
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.273682
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.257324
+read!
+pulse ADC : 0.287598
+read!
+pulse ADC : 0.306641
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.292725
+read!
+pulse ADC : 0.264893
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.267090
+read!
+pulse ADC : 0.296875
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.307129
+read!
+pulse ADC : 0.280029
+read!
+pulse ADC : 0.255371
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.278809
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.300049
+read!
+pulse ADC : 0.270508
+read!
+pulse ADC : 0.251221
+read!
+pulse ADC : 0.260498
+read!
+pulse ADC : 0.291504
+read!
+pulse ADC : 0.310547
+read!
+pulse ADC : 0.310547
+read!
+pulse ADC : 0.288086
+read!
+pulse ADC : 0.260986
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.271973
+read!
+pulse ADC : 0.300049
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.277344
+read!
+pulse ADC : 0.253662
+read!
+pulse ADC : 0.254639
+read!
+pulse ADC : 0.284912
+read!
+pulse ADC : 0.304932
+read!
+pulse ADC : 0.315186
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.266846
+read!
+pulse ADC : 0.251221
+read!
+pulse ADC : 0.264160
+read!
+pulse ADC : 0.294922
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.310303
+read!
+pulse ADC : 0.286133
+read!
+pulse ADC : 0.260742
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.275391
+read!
+pulse ADC : 0.300781
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.303223
+read!
+pulse ADC : 0.271973
+read!
+pulse ADC : 0.251221
+read!
+pulse ADC : 0.256836
+read!
+pulse ADC : 0.288330
+read!
+pulse ADC : 0.307861
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.293457
+read!
+pulse ADC : 0.265381
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.267578
+read!
+pulse ADC : 0.298096
+read!
+pulse ADC : 0.313232
+read!
+pulse ADC : 0.307129
+read!
+pulse ADC : 0.280762
+read!
+pulse ADC : 0.255615
+read!
+pulse ADC : 0.253174
+read!
+pulse ADC : 0.281494
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.300537
+read!
+pulse ADC : 0.269043
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.261475
+read!
+pulse ADC : 0.292725
+read!
+pulse ADC : 0.312256
+read!
+pulse ADC : 0.310791
+read!
+pulse ADC : 0.288086
+read!
+pulse ADC : 0.261719
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.273926
+read!
+pulse ADC : 0.302246
+read!
+pulse ADC : 0.314209
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.274902
+read!
+pulse ADC : 0.251221
+read!
+pulse ADC : 0.253662
+read!
+pulse ADC : 0.285400
+read!
+pulse ADC : 0.306152
+read!
+pulse ADC : 0.315186
+read!
+pulse ADC : 0.296387
+read!
+pulse ADC : 0.266846
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.265381
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.307617
+read!
+pulse ADC : 0.283936
+read!
+pulse ADC : 0.258545
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.276611
+read!
+pulse ADC : 0.303467
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.302734
+read!
+pulse ADC : 0.271484
+read!
+pulse ADC : 0.249268
+read!
+pulse ADC : 0.257568
+read!
+pulse ADC : 0.289307
+read!
+pulse ADC : 0.309326
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.291260
+read!
+pulse ADC : 0.264160
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.270020
+read!
+pulse ADC : 0.300049
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.307129
+read!
+pulse ADC : 0.279541
+read!
+pulse ADC : 0.253418
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.281494
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.298096
+read!
+pulse ADC : 0.268066
+read!
+pulse ADC : 0.249268
+read!
+pulse ADC : 0.260010
+read!
+pulse ADC : 0.292725
+read!
+pulse ADC : 0.311279
+read!
+pulse ADC : 0.310303
+read!
+pulse ADC : 0.286865
+read!
+pulse ADC : 0.260986
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.273682
+read!
+pulse ADC : 0.301270
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.304199
+read!
+pulse ADC : 0.273682
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.253174
+read!
+pulse ADC : 0.286133
+read!
+pulse ADC : 0.306641
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.294189
+read!
+pulse ADC : 0.264893
+read!
+pulse ADC : 0.250000
+read!
+pulse ADC : 0.264404
+read!
+pulse ADC : 0.296875
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.307617
+read!
+pulse ADC : 0.281250
+read!
+pulse ADC : 0.257324
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.276611
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.303223
+read!
+pulse ADC : 0.271973
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.258301
+read!
+pulse ADC : 0.290283
+read!
+pulse ADC : 0.310303
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.291260
+read!
+pulse ADC : 0.263184
+read!
+pulse ADC : 0.250000
+read!
+pulse ADC : 0.270508
+read!
+pulse ADC : 0.300049
+read!
+pulse ADC : 0.314209
+read!
+pulse ADC : 0.307129
+read!
+pulse ADC : 0.278320
+read!
+pulse ADC : 0.254150
+read!
+pulse ADC : 0.252441
+read!
+pulse ADC : 0.281738
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.299072
+read!
+pulse ADC : 0.268066
+read!
+pulse ADC : 0.250000
+read!
+pulse ADC : 0.260986
+read!
+pulse ADC : 0.292969
+read!
+pulse ADC : 0.312744
+read!
+pulse ADC : 0.310303
+read!
+pulse ADC : 0.285889
+read!
+pulse ADC : 0.260742
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.275146
+read!
+pulse ADC : 0.301514
+read!
+pulse ADC : 0.316162
+read!
+pulse ADC : 0.306152
+read!
+pulse ADC : 0.274658
+read!
+pulse ADC : 0.252441
+read!
+pulse ADC : 0.255371
+read!
+pulse ADC : 0.288086
+read!
+pulse ADC : 0.307861
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.294189
+read!
+pulse ADC : 0.265381
+read!
+pulse ADC : 0.248779
+read!
+pulse ADC : 0.266357
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.309326
+read!
+pulse ADC : 0.281494
+read!
+pulse ADC : 0.257568
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.279541
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.316162
+read!
+pulse ADC : 0.302734
+read!
+pulse ADC : 0.271973
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.259277
+read!
+pulse ADC : 0.291260
+read!
+pulse ADC : 0.310547
+read!
+pulse ADC : 0.313232
+read!
+pulse ADC : 0.290771
+read!
+pulse ADC : 0.263184
+read!
+pulse ADC : 0.250000
+read!
+pulse ADC : 0.270508
+read!
+pulse ADC : 0.300537
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.307373
+read!
+pulse ADC : 0.278076
+read!
+pulse ADC : 0.253906
+read!
+pulse ADC : 0.253174
+read!
+pulse ADC : 0.283203
+read!
+pulse ADC : 0.306152
+read!
+pulse ADC : 0.316162
+read!
+pulse ADC : 0.297852
+read!
+pulse ADC : 0.267090
+read!
+pulse ADC : 0.249268
+read!
+pulse ADC : 0.260986
+read!
+pulse ADC : 0.294189
+read!
+pulse ADC : 0.313232
+read!
+pulse ADC : 0.310547
+read!
+pulse ADC : 0.286133
+read!
+pulse ADC : 0.260742
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.274414
+read!
+pulse ADC : 0.302246
+read!
+pulse ADC : 0.315918
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.273682
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.255371
+read!
+pulse ADC : 0.288330
+read!
+pulse ADC : 0.307861
+read!
+pulse ADC : 0.316162
+read!
+pulse ADC : 0.294189
+read!
+pulse ADC : 0.264893
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.265625
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.307617
+read!
+pulse ADC : 0.281494
+read!
+pulse ADC : 0.257324
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.278809
+read!
+pulse ADC : 0.304199
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.301514
+read!
+pulse ADC : 0.270752
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.258057
+read!
+pulse ADC : 0.290771
+read!
+pulse ADC : 0.310547
+read!
+pulse ADC : 0.312500
+read!
+pulse ADC : 0.289307
+read!
+pulse ADC : 0.261719
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.269043
+read!
+pulse ADC : 0.299316
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.276611
+read!
+pulse ADC : 0.251953
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.281738
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.298096
+read!
+pulse ADC : 0.267578
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.261719
+read!
+pulse ADC : 0.294189
+read!
+pulse ADC : 0.312988
+read!
+pulse ADC : 0.310547
+read!
+pulse ADC : 0.285889
+read!
+pulse ADC : 0.260986
+read!
+pulse ADC : 0.251221
+read!
+pulse ADC : 0.274658
+read!
+pulse ADC : 0.302246
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.304199
+read!
+pulse ADC : 0.273682
+read!
+pulse ADC : 0.251221
+read!
+pulse ADC : 0.256104
+read!
+pulse ADC : 0.286865
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.293457
+read!
+pulse ADC : 0.265625
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.266357
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.307861
+read!
+pulse ADC : 0.281494
+read!
+pulse ADC : 0.257324
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.279541
+read!
+pulse ADC : 0.304199
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.301270
+read!
+pulse ADC : 0.270752
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.258301
+read!
+pulse ADC : 0.290771
+read!
+pulse ADC : 0.310791
+read!
+pulse ADC : 0.312500
+read!
+pulse ADC : 0.290283
+read!
+pulse ADC : 0.263428
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.270752
+read!
+pulse ADC : 0.300049
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.278320
+read!
+pulse ADC : 0.253418
+read!
+pulse ADC : 0.252930
+read!
+pulse ADC : 0.283936
+read!
+pulse ADC : 0.306152
+read!
+pulse ADC : 0.316162
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.267334
+read!
+pulse ADC : 0.250000
+read!
+pulse ADC : 0.261719
+read!
+pulse ADC : 0.294678
+read!
+pulse ADC : 0.313232
+read!
+pulse ADC : 0.309814
+read!
+pulse ADC : 0.284668
+read!
+pulse ADC : 0.260498
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.275146
+read!
+pulse ADC : 0.301758
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.304199
+read!
+pulse ADC : 0.273682
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.256104
+read!
+pulse ADC : 0.289307
+read!
+pulse ADC : 0.307861
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.294189
+read!
+pulse ADC : 0.266113
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.266113
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.307861
+read!
+pulse ADC : 0.281494
+read!
+pulse ADC : 0.256104
+read!
+pulse ADC : 0.252441
+read!
+pulse ADC : 0.278809
+read!
+pulse ADC : 0.304688
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.301270
+read!
+pulse ADC : 0.271240
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.259766
+read!
+pulse ADC : 0.291260
+read!
+pulse ADC : 0.311279
+read!
+pulse ADC : 0.312256
+read!
+pulse ADC : 0.288330
+read!
+pulse ADC : 0.260986
+read!
+pulse ADC : 0.248779
+read!
+pulse ADC : 0.268799
+read!
+pulse ADC : 0.300049
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.306641
+read!
+pulse ADC : 0.276611
+read!
+pulse ADC : 0.253174
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.281738
+read!
+pulse ADC : 0.304199
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.296387
+read!
+pulse ADC : 0.266357
+read!
+pulse ADC : 0.249268
+read!
+pulse ADC : 0.260986
+read!
+pulse ADC : 0.294189
+read!
+pulse ADC : 0.312988
+read!
+pulse ADC : 0.309326
+read!
+pulse ADC : 0.284180
+read!
+pulse ADC : 0.260254
+read!
+pulse ADC : 0.249268
+read!
+pulse ADC : 0.273682
+read!
+pulse ADC : 0.301025
+read!
+pulse ADC : 0.314209
+read!
+pulse ADC : 0.303223
+read!
+pulse ADC : 0.273193
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.257324
+read!
+pulse ADC : 0.287598
+read!
+pulse ADC : 0.307861
+read!
+pulse ADC : 0.315186
+read!
+pulse ADC : 0.292725
+read!
+pulse ADC : 0.264404
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.266846
+read!
+pulse ADC : 0.299316
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.307861
+read!
+pulse ADC : 0.281494
+read!
+pulse ADC : 0.256836
+read!
+pulse ADC : 0.253662
+read!
+pulse ADC : 0.280029
+read!
+pulse ADC : 0.304932
+read!
+pulse ADC : 0.315918
+read!
+pulse ADC : 0.300537
+read!
+pulse ADC : 0.270508
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.259766
+read!
+pulse ADC : 0.291504
+read!
+pulse ADC : 0.312744
+read!
+pulse ADC : 0.313232
+read!
+pulse ADC : 0.290283
+read!
+pulse ADC : 0.263428
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.271973
+read!
+pulse ADC : 0.300781
+read!
+pulse ADC : 0.315918
+read!
+pulse ADC : 0.306152
+read!
+pulse ADC : 0.276611
+read!
+pulse ADC : 0.253174
+read!
+pulse ADC : 0.254639
+read!
+pulse ADC : 0.284424
+read!
+pulse ADC : 0.306152
+read!
+pulse ADC : 0.316162
+read!
+pulse ADC : 0.294922
+read!
+pulse ADC : 0.266357
+read!
+pulse ADC : 0.248535
+read!
+pulse ADC : 0.262695
+read!
+pulse ADC : 0.293945
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.309814
+read!
+pulse ADC : 0.284668
+read!
+pulse ADC : 0.259766
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.276123
+read!
+pulse ADC : 0.303223
+read!
+pulse ADC : 0.316162
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.272949
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.257568
+read!
+pulse ADC : 0.289307
+read!
+pulse ADC : 0.309814
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.293457
+read!
+pulse ADC : 0.264893
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.267334
+read!
+pulse ADC : 0.299072
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.307373
+read!
+pulse ADC : 0.280029
+read!
+pulse ADC : 0.255371
+read!
+pulse ADC : 0.253174
+read!
+pulse ADC : 0.280273
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.315918
+read!
+pulse ADC : 0.300049
+read!
+pulse ADC : 0.270508
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.260254
+read!
+pulse ADC : 0.292725
+read!
+pulse ADC : 0.311279
+read!
+pulse ADC : 0.312256
+read!
+pulse ADC : 0.289307
+read!
+pulse ADC : 0.262695
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.272949
+read!
+pulse ADC : 0.300537
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.306152
+read!
+pulse ADC : 0.275146
+read!
+pulse ADC : 0.252441
+read!
+pulse ADC : 0.253906
+read!
+pulse ADC : 0.284668
+read!
+pulse ADC : 0.306152
+read!
+pulse ADC : 0.316162
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.267334
+read!
+pulse ADC : 0.250000
+read!
+pulse ADC : 0.263428
+read!
+pulse ADC : 0.294922
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.309814
+read!
+pulse ADC : 0.284424
+read!
+pulse ADC : 0.259277
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.276611
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.303467
+read!
+pulse ADC : 0.272705
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.257324
+read!
+pulse ADC : 0.288330
+read!
+pulse ADC : 0.309570
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.292725
+read!
+pulse ADC : 0.264893
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.268555
+read!
+pulse ADC : 0.298096
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.279541
+read!
+pulse ADC : 0.254150
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.281494
+read!
+pulse ADC : 0.304932
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.300049
+read!
+pulse ADC : 0.268311
+read!
+pulse ADC : 0.250000
+read!
+pulse ADC : 0.259766
+read!
+pulse ADC : 0.292725
+read!
+pulse ADC : 0.312744
+read!
+pulse ADC : 0.311279
+read!
+pulse ADC : 0.287354
+read!
+pulse ADC : 0.262695
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.273682
+read!
+pulse ADC : 0.300781
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.275391
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.254639
+read!
+pulse ADC : 0.285156
+read!
+pulse ADC : 0.306152
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.296143
+read!
+pulse ADC : 0.266602
+read!
+pulse ADC : 0.250244
+read!
+pulse ADC : 0.264160
+read!
+pulse ADC : 0.294922
+read!
+pulse ADC : 0.313232
+read!
+pulse ADC : 0.307861
+read!
+pulse ADC : 0.281738
+read!
+pulse ADC : 0.258057
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.276611
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.302734
+read!
+pulse ADC : 0.271973
+read!
+pulse ADC : 0.251221
+read!
+pulse ADC : 0.257568
+read!
+pulse ADC : 0.289307
+read!
+pulse ADC : 0.310547
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.291504
+read!
+pulse ADC : 0.264404
+read!
+pulse ADC : 0.251221
+read!
+pulse ADC : 0.269043
+read!
+pulse ADC : 0.299805
+read!
+pulse ADC : 0.314209
+read!
+pulse ADC : 0.307129
+read!
+pulse ADC : 0.278809
+read!
+pulse ADC : 0.254639
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.281494
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.299316
+read!
+pulse ADC : 0.268066
+read!
+pulse ADC : 0.250244
+read!
+pulse ADC : 0.260742
+read!
+pulse ADC : 0.292725
+read!
+pulse ADC : 0.313232
+read!
+pulse ADC : 0.311279
+read!
+pulse ADC : 0.287598
+read!
+pulse ADC : 0.262695
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.273682
+read!
+pulse ADC : 0.302246
+read!
+pulse ADC : 0.315918
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.275146
+read!
+pulse ADC : 0.253174
+read!
+pulse ADC : 0.256104
+read!
+pulse ADC : 0.286865
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.316162
+read!
+pulse ADC : 0.294922
+read!
+pulse ADC : 0.266357
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.264160
+read!
+pulse ADC : 0.296875
+read!
+pulse ADC : 0.314209
+read!
+pulse ADC : 0.309326
+read!
+pulse ADC : 0.281982
+read!
+pulse ADC : 0.259277
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.277344
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.301758
+read!
+pulse ADC : 0.271240
+read!
+pulse ADC : 0.251221
+read!
+pulse ADC : 0.257568
+read!
+pulse ADC : 0.289307
+read!
+pulse ADC : 0.311279
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.291504
+read!
+pulse ADC : 0.264893
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.270508
+read!
+pulse ADC : 0.300049
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.278076
+read!
+pulse ADC : 0.254639
+read!
+pulse ADC : 0.253662
+read!
+pulse ADC : 0.281738
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.316162
+read!
+pulse ADC : 0.298096
+read!
+pulse ADC : 0.268555
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.261719
+read!
+pulse ADC : 0.294189
+read!
+pulse ADC : 0.312988
+read!
+pulse ADC : 0.311279
+read!
+pulse ADC : 0.285889
+read!
+pulse ADC : 0.260742
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.273438
+read!
+pulse ADC : 0.300781
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.304199
+read!
+pulse ADC : 0.273682
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.254150
+read!
+pulse ADC : 0.285889
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.293457
+read!
+pulse ADC : 0.264160
+read!
+pulse ADC : 0.249268
+read!
+pulse ADC : 0.264893
+read!
+pulse ADC : 0.296875
+read!
+pulse ADC : 0.312988
+read!
+pulse ADC : 0.307617
+read!
+pulse ADC : 0.280029
+read!
+pulse ADC : 0.255371
+read!
+pulse ADC : 0.251221
+read!
+pulse ADC : 0.278809
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.301270
+read!
+pulse ADC : 0.271240
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.258301
+read!
+pulse ADC : 0.289795
+read!
+pulse ADC : 0.310547
+read!
+pulse ADC : 0.312500
+read!
+pulse ADC : 0.289307
+read!
+pulse ADC : 0.262695
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.270752
+read!
+pulse ADC : 0.300781
+read!
+pulse ADC : 0.314209
+read!
+pulse ADC : 0.307129
+read!
+pulse ADC : 0.278320
+read!
+pulse ADC : 0.254150
+read!
+pulse ADC : 0.254639
+read!
+pulse ADC : 0.283447
+read!
+pulse ADC : 0.306641
+read!
+pulse ADC : 0.316650
+read!
+pulse ADC : 0.299316
+read!
+pulse ADC : 0.268066
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.260986
+read!
+pulse ADC : 0.293945
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.310303
+read!
+pulse ADC : 0.285889
+read!
+pulse ADC : 0.260498
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.274658
+read!
+pulse ADC : 0.301025
+read!
+pulse ADC : 0.316162
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.274658
+read!
+pulse ADC : 0.252441
+read!
+pulse ADC : 0.255615
+read!
+pulse ADC : 0.288330
+read!
+pulse ADC : 0.307617
+read!
+pulse ADC : 0.316162
+read!
+pulse ADC : 0.294922
+read!
+pulse ADC : 0.266357
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.265381
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.307129
+read!
+pulse ADC : 0.280762
+read!
+pulse ADC : 0.254883
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.278809
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.300781
+read!
+pulse ADC : 0.270752
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.258301
+read!
+pulse ADC : 0.290771
+read!
+pulse ADC : 0.310791
+read!
+pulse ADC : 0.312500
+read!
+pulse ADC : 0.289307
+read!
+pulse ADC : 0.263184
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.270752
+read!
+pulse ADC : 0.300537
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.277344
+read!
+pulse ADC : 0.253662
+read!
+pulse ADC : 0.253906
+read!
+pulse ADC : 0.283936
+read!
+pulse ADC : 0.306641
+read!
+pulse ADC : 0.316162
+read!
+pulse ADC : 0.297852
+read!
+pulse ADC : 0.268066
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.263184
+read!
+pulse ADC : 0.294922
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.310547
+read!
+pulse ADC : 0.285889
+read!
+pulse ADC : 0.260742
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.276123
+read!
+pulse ADC : 0.304199
+read!
+pulse ADC : 0.316162
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.274414
+read!
+pulse ADC : 0.252441
+read!
+pulse ADC : 0.257568
+read!
+pulse ADC : 0.289307
+read!
+pulse ADC : 0.309814
+read!
+pulse ADC : 0.315918
+read!
+pulse ADC : 0.294189
+read!
+pulse ADC : 0.264893
+read!
+pulse ADC : 0.251221
+read!
+pulse ADC : 0.267334
+read!
+pulse ADC : 0.299316
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.309326
+read!
+pulse ADC : 0.281494
+read!
+pulse ADC : 0.257324
+read!
+pulse ADC : 0.252441
+read!
+pulse ADC : 0.280029
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.316162
+read!
+pulse ADC : 0.301270
+read!
+pulse ADC : 0.271484
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.258545
+read!
+pulse ADC : 0.290771
+read!
+pulse ADC : 0.310791
+read!
+pulse ADC : 0.312256
+read!
+pulse ADC : 0.288330
+read!
+pulse ADC : 0.261719
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.270752
+read!
+pulse ADC : 0.300049
+read!
+pulse ADC : 0.315186
+read!
+pulse ADC : 0.306641
+read!
+pulse ADC : 0.275391
+read!
+pulse ADC : 0.251953
+read!
+pulse ADC : 0.253662
+read!
+pulse ADC : 0.284424
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.268066
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.263184
+read!
+pulse ADC : 0.294922
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.310059
+read!
+pulse ADC : 0.284912
+read!
+pulse ADC : 0.260254
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.276123
+read!
+pulse ADC : 0.303467
+read!
+pulse ADC : 0.315918
+read!
+pulse ADC : 0.304199
+read!
+pulse ADC : 0.273926
+read!
+pulse ADC : 0.252441
+read!
+pulse ADC : 0.257324
+read!
+pulse ADC : 0.289307
+read!
+pulse ADC : 0.309814
+read!
+pulse ADC : 0.316162
+read!
+pulse ADC : 0.293945
+read!
+pulse ADC : 0.265625
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.267578
+read!
+pulse ADC : 0.299316
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.307617
+read!
+pulse ADC : 0.280273
+read!
+pulse ADC : 0.256104
+read!
+pulse ADC : 0.253174
+read!
+pulse ADC : 0.280762
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.316162
+read!
+pulse ADC : 0.300537
+read!
+pulse ADC : 0.268311
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.259277
+read!
+pulse ADC : 0.291504
+read!
+pulse ADC : 0.312500
+read!
+pulse ADC : 0.312256
+read!
+pulse ADC : 0.288330
+read!
+pulse ADC : 0.263184
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.272949
+read!
+pulse ADC : 0.300781
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.276367
+read!
+pulse ADC : 0.252930
+read!
+pulse ADC : 0.254639
+read!
+pulse ADC : 0.285156
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.316650
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.267334
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.264160
+read!
+pulse ADC : 0.296875
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.310303
+read!
+pulse ADC : 0.284180
+read!
+pulse ADC : 0.260254
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.277100
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.316162
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.273682
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.258545
+read!
+pulse ADC : 0.289307
+read!
+pulse ADC : 0.307861
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.292725
+read!
+pulse ADC : 0.264160
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.268555
+read!
+pulse ADC : 0.299316
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.309326
+read!
+pulse ADC : 0.280029
+read!
+pulse ADC : 0.254883
+read!
+pulse ADC : 0.253174
+read!
+pulse ADC : 0.281006
+read!
+pulse ADC : 0.304688
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.300537
+read!
+pulse ADC : 0.270508
+read!
+pulse ADC : 0.249756
+read!
+pulse ADC : 0.263184
+read!
+pulse ADC : 0.292969
+read!
+pulse ADC : 0.312500
+read!
+pulse ADC : 0.313232
+read!
+pulse ADC : 0.288330
+read!
+pulse ADC : 0.260986
+read!
+pulse ADC : 0.248779
+read!
+pulse ADC : 0.274414
+read!
+pulse ADC : 0.300781
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.306152
+read!
+pulse ADC : 0.275146
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.253906
+read!
+pulse ADC : 0.286133
+read!
+pulse ADC : 0.304932
+read!
+pulse ADC : 0.315186
+read!
+pulse ADC : 0.296875
+read!
+pulse ADC : 0.265625
+read!
+pulse ADC : 0.247803
+read!
+pulse ADC : 0.265381
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.312744
+read!
+pulse ADC : 0.310303
+read!
+pulse ADC : 0.284180
+read!
+pulse ADC : 0.259277
+read!
+pulse ADC : 0.250000
+read!
+pulse ADC : 0.278320
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.314209
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.273193
+read!
+pulse ADC : 0.250244
+read!
+pulse ADC : 0.260742
+read!
+pulse ADC : 0.290771
+read!
+pulse ADC : 0.310547
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.293457
+read!
+pulse ADC : 0.264893
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.270996
+read!
+pulse ADC : 0.300049
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.307617
+read!
+pulse ADC : 0.279541
+read!
+pulse ADC : 0.255127
+read!
+pulse ADC : 0.254150
+read!
+pulse ADC : 0.284424
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.315918
+read!
+pulse ADC : 0.301270
+read!
+pulse ADC : 0.270020
+read!
+pulse ADC : 0.249268
+read!
+pulse ADC : 0.262695
+read!
+pulse ADC : 0.293457
+read!
+pulse ADC : 0.312256
+read!
+pulse ADC : 0.310791
+read!
+pulse ADC : 0.287354
+read!
+pulse ADC : 0.260986
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.271973
+read!
+pulse ADC : 0.300537
+read!
+pulse ADC : 0.314209
+read!
+pulse ADC : 0.304199
+read!
+pulse ADC : 0.274658
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.255127
+read!
+pulse ADC : 0.287354
+read!
+pulse ADC : 0.307129
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.296875
+read!
+pulse ADC : 0.267090
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.264404
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.309814
+read!
+pulse ADC : 0.283936
+read!
+pulse ADC : 0.258545
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.278320
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.316162
+read!
+pulse ADC : 0.303223
+read!
+pulse ADC : 0.270508
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.258301
+read!
+pulse ADC : 0.290771
+read!
+pulse ADC : 0.310791
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.291504
+read!
+pulse ADC : 0.263428
+read!
+pulse ADC : 0.250000
+read!
+pulse ADC : 0.269043
+read!
+pulse ADC : 0.299316
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.278809
+read!
+pulse ADC : 0.254150
+read!
+pulse ADC : 0.253174
+read!
+pulse ADC : 0.281738
+read!
+pulse ADC : 0.304932
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.298096
+read!
+pulse ADC : 0.268066
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.260742
+read!
+pulse ADC : 0.294189
+read!
+pulse ADC : 0.313232
+read!
+pulse ADC : 0.310791
+read!
+pulse ADC : 0.287354
+read!
+pulse ADC : 0.261475
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.274414
+read!
+pulse ADC : 0.302246
+read!
+pulse ADC : 0.316162
+read!
+pulse ADC : 0.304932
+read!
+pulse ADC : 0.273682
+read!
+pulse ADC : 0.252930
+read!
+pulsE (1650432) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:
+E (1650432) task_wdt:  - IDLE1 (CPU 1)
+E (1650432) task_wdt: Tasks currently running:
+E (1650432) task_wdt: CPU 0: IDLE0
+E (1650432) task_wdt: CPU 1: PulseProcessTas
+E (1650432) task_wdt: Print CPU 1 backtrace
+
+
+Backtrace: 0x40377E96:0x3FC9E2E0 0x40377769:0x3FC9E300 0x4200BFAE:0x3FCAADB0 0x4200C729:0x3FCAADE0 0x4200F995:0x3FCAAE10 0x420081AA:0x3FCAAE30 0x4200224C:0x3FCAAE50 0x4200F995:0x3FCAAE70 0x420081AA:0x3FCAAE90 0x4209E265:0x3FCAAEB0 0x42097F0E:0x3FCAAEE0 0x42098739:0x3FCAAF00 0x42098157:0x3FCAAF80 0x4201147D:0x3FCAAFD0 0x4201149D:0x3FCAB000 0x40380F81:0x3FCAB020
+
+e ADC : 0.257324
+read!
+pulse ADC : 0.467529
+read!
+pulse ADC : 0.368896
+read!
+pulse ADC : 0.337891
+read!
+pulse ADC : 0.337646
+read!
+pulse ADC : 0.337646
+read!
+pulse ADC : 0.317871
+read!
+pulse ADC : 0.281494
+read!
+pulse ADC : 0.256104
+read!
+pulse ADC : 0.257568
+read!
+pulse ADC : 0.287354
+read!
+pulse ADC : 0.307129
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.294922
+read!
+pulse ADC : 0.266357
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.264893
+read!
+pulse ADC : 0.297363
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.309570
+read!
+pulse ADC : 0.283203
+read!
+pulse ADC : 0.257568
+read!
+pulse ADC : 0.250000
+read!
+pulse ADC : 0.277100
+read!
+pulse ADC : 0.303467
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.302246
+read!
+pulse ADC : 0.271973
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.259277
+read!
+pulse ADC : 0.290771
+read!
+pulse ADC : 0.310547
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.291260
+read!
+pulse ADC : 0.262695
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.270020
+read!
+pulse ADC : 0.299805
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.307129
+read!
+pulse ADC : 0.278809
+read!
+pulse ADC : 0.253662
+read!
+pulse ADC : 0.252441
+read!
+pulse ADC : 0.281250
+read!
+pulse ADC : 0.304932
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.297852
+read!
+pulse ADC : 0.267578
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.261475
+read!
+pulse ADC : 0.294678
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.311279
+read!
+pulse ADC : 0.287354
+read!
+pulse ADC : 0.260986
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.273682
+read!
+pulse ADC : 0.301270
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.304932
+read!
+pulse ADC : 0.274414
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.256104
+read!
+pulse ADC : 0.286865
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.314209
+read!
+pulse ADC : 0.294678
+read!
+pulse ADC : 0.265381
+read!
+pulse ADC : 0.251221
+read!
+pulse ADC : 0.265625
+read!
+pulse ADC : 0.297852
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.310303
+read!
+pulse ADC : 0.283447
+read!
+pulse ADC : 0.257568
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.277344
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.301270
+read!
+pulse ADC : 0.270508
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.258301
+read!
+pulse ADC : 0.290283
+read!
+pulse ADC : 0.310547
+read!
+pulse ADC : 0.313232
+read!
+pulse ADC : 0.290283
+read!
+pulse ADC : 0.261475
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.270020
+read!
+pulse ADC : 0.299805
+read!
+pulse ADC : 0.314697
+read!
+pulse ADC : 0.306641
+read!
+pulse ADC : 0.278320
+read!
+pulse ADC : 0.254639
+read!
+pulse ADC : 0.255371
+read!
+pulse ADC : 0.284424
+read!
+pulse ADC : 0.306641
+read!
+pulse ADC : 0.316650
+read!
+pulse ADC : 0.297852
+read!
+pulse ADC : 0.267578
+read!
+pulse ADC : 0.251465
+read!
+pulse ADC : 0.261719
+read!
+pulse ADC : 0.294189
+read!
+pulse ADC : 0.313721
+read!
+pulse ADC : 0.310791
+read!
+pulse ADC : 0.288086
+read!
+pulse ADC : 0.261719
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.276611
+read!
+pulse ADC : 0.303467
+read!
+pulse ADC : 0.316162
+read!
+pulse ADC : 0.304932
+read!
+pulse ADC : 0.275146
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.256104
+read!
+pulse ADC : 0.286865
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.294189
+read!
+pulse ADC : 0.265381
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.266846
+read!
+pulse ADC : 0.298584
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.309814
+read!
+pulse ADC : 0.283203
+read!
+pulse ADC : 0.257568
+read!
+pulse ADC : 0.251953
+read!
+pulse ADC : 0.278320
+read!
+pulse ADC : 0.304199
+read!
+pulse ADC : 0.316162
+read!
+pulse ADC : 0.301270
+read!
+pulse ADC : 0.270752
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.259766
+read!
+pulse ADC : 0.291260
+read!
+pulse ADC : 0.310791
+read!
+pulse ADC : 0.313232
+read!
+pulse ADC : 0.290283
+read!
+pulse ADC : 0.262695
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.270508
+read!
+pulse ADC : 0.300781
+read!
+pulse ADC : 0.315918
+read!
+pulse ADC : 0.307617
+read!
+pulse ADC : 0.279053
+read!
+pulse ADC : 0.254639
+read!
+pulse ADC : 0.255127
+read!
+pulse ADC : 0.285400
+read!
+pulse ADC : 0.306885
+read!
+pulse ADC : 0.316650
+read!
+pulse ADC : 0.297852
+read!
+pulse ADC : 0.268066
+read!
+pulse ADC : 0.251221
+read!
+pulse ADC : 0.263184
+read!
+pulse ADC : 0.296143
+read!
+pulse ADC : 0.313965
+read!
+pulse ADC : 0.311279
+read!
+pulse ADC : 0.285889
+read!
+pulse ADC : 0.261475
+read!
+pulse ADC : 0.250977
+read!
+pulse ADC : 0.276611
+read!
+pulse ADC : 0.303711
+read!
+pulse ADC : 0.316650
+read!
+pulse ADC : 0.305664
+read!
+pulse ADC : 0.275146
+read!
+pulse ADC : 0.252197
+read!
+pulse ADC : 0.258301
+read!
+pulse ADC : 0.288086
+read!
+pulse ADC : 0.307861
+read!
+pulse ADC : 0.315674
+read!
+pulse ADC : 0.292969
+read!
+pulse ADC : 0.264160
+read!
+pulse ADC : 0.250488
+read!
+pulse ADC : 0.265625
+read!
+pulse ADC : 0.297363
+re

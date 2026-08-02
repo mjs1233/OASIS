@@ -1,6 +1,7 @@
 #include <freertos/FreeRTOS.h>
 #include "IMUProcess.hpp"
 #include "IMUData.hpp"
+#include "LogProcess.hpp"
 #include "NotifyFlags.hpp"
 
 
@@ -50,6 +51,7 @@ namespace oasis {
 
     void IMUProcess::init_impl() {
 
+
         m_main_process_task_handle = xTaskGetHandle("main process");
         //Init MPU6050 I2C
         //m_mpu6050.emplace();
@@ -80,6 +82,7 @@ namespace oasis {
         ESP_ERROR_CHECK(gptimer_register_event_callbacks(gptimer, &timer_callback,m_task_handle));
         ESP_ERROR_CHECK(gptimer_enable(gptimer));
         ESP_ERROR_CHECK(gptimer_start(gptimer));
+        oasis::LogProcess::write_text("[MAIN]", "MAIN PROCESS INITIALIZED");
 
     }
 
