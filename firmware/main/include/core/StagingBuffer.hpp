@@ -18,6 +18,7 @@ namespace oasis::core {
     template <staging_variable_trait T>
     class StagingBuffer {
     public:
+        StagingBuffer() = default;
         StagingBuffer(StagingBuffer const& other) = delete;
         StagingBuffer(StagingBuffer&& other) noexcept = delete;
         StagingBuffer& operator=(StagingBuffer const& other) = delete;
