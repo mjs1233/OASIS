@@ -7,5 +7,8 @@ set(COMPONENT_SRCS
         "source/NetworkQueue.cpp"
         "source/MPU6050.cpp"
         "source/NetworkManager.cpp"
+
         "source/SHT31.cpp"
+
+        "source/NTC.cpp"
 )

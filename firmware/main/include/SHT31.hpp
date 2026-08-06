@@ -1,6 +1,3 @@
-//
-// SHT31 humidity/temperature sensor driver (I2C).
-//
 
 #ifndef FIRMWARE_SHT31_HPP
 #define FIRMWARE_SHT31_HPP
