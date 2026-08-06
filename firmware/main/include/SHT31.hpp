@@ -16,14 +16,8 @@ namespace oasis {
         SHT31();
         ~SHT31();
 
-        // Explicit initialization: creates the I2C bus/device, performs a soft
-        // reset, and verifies communication via the status register.
-        // Must be called once before read(). Safe to call more than once.
         bool start();
 
-        // Triggers a single-shot measurement, waits for conversion, reads and
-        // CRC-validates the result, then stages it. Returns false on any I2C
-        // or CRC failure (stale values are kept in that case).
         bool read();
 
         // Returns the last successfully staged temperature, in Celsius.
