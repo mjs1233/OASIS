@@ -6,6 +6,7 @@
 #include "LogProcess.hpp"
 #include "MainProcess.hpp"
 #include "NetworkProcess.hpp"
+#include "esp_log.h"
 
 std::optional<oasis::MainProcess> g_main_process = std::nullopt;
 std::optional<oasis::NetworkProcess> g_network_process = std::nullopt;
@@ -19,11 +20,17 @@ void app_main(void) {
 }
 
 void oasis::startup() {
-
+    oasis::NetworkQueue::create();
     g_log_process.emplace();
-    g_log_process->create();
+    if (!g_log_process->create()) {
+        ESP_LOGE("firmware", "log process creation failed");
+    }
     g_main_process.emplace();
-    g_main_process->create();
+    if (!g_main_process->create()) {
+        ESP_LOGE("firmware", "main process creation failed");
+    }
     g_network_process.emplace();
-    g_network_process->create();
+    if (!g_network_process->create()) {
+        ESP_LOGE("firmware", "network process creation failed");
+    }
 }

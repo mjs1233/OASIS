@@ -46,6 +46,7 @@ namespace oasis {
                 arr[2] = 'L';
                 arr[3] = 'L';
                 arr[4] = '\0';
+                length = 5;
                 return true;
             }
         };

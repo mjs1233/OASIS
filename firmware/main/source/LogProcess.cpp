@@ -59,13 +59,17 @@ namespace oasis {
 
         ESP_ERROR_CHECK(uart_driver_install(UART_NUM_0, 2048, 0, 0, NULL, 0));
 
-        esp_log_set_vprintf(redirected_vprintf);
+        //esp_log_set_vprintf(redirected_vprintf);
         m_uart_mutex = xSemaphoreCreateMutex();
     }
 
     void LogProcess::update_impl() {
         while (true) {
             ////>>>
+            uint32_t notification_value = 0;
+            if (xTaskNotifyWait(0x0, 0xFFFFFFFF,&notification_value, portMAX_DELAY) == true) {
+                std::atomic_thread_fence(std::memory_order_acquire);
+            }
         }
     }
 
@@ -165,7 +169,7 @@ int redirected_vprintf(const char *fmt, va_list args) {
     int len = vsnprintf(log_buffer, sizeof(log_buffer), fmt, args);
 
     if (len > 0) {
-        oasis::LogProcess::write_text("[ESP LOG]", log_buffer);
+        oasis::LogProcess::write_text("nina", log_buffer);
     }
 
     return len;

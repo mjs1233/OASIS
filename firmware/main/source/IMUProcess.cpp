@@ -2,10 +2,26 @@
 #include "IMUProcess.hpp"
 #include "IMUData.hpp"
 #include "LogProcess.hpp"
+#include <cmath>
 #include "NotifyFlags.hpp"
 
 
 namespace oasis {
+    namespace {
+
+        struct EulerAngle {
+            float roll;   // deg, X축 기준 회전
+            float pitch;  // deg, Y축 기준 회전
+        };
+
+        EulerAngle accel_to_angle(float ax, float ay, float az) {
+            EulerAngle e;
+            e.roll  = atan2f(ay, az) * 180.0f / M_PI;
+            e.pitch = atan2f(-ax, sqrtf(ay * ay + az * az)) * 180.0f / M_PI;
+            return e;
+        }
+    }
+
 
     bool IMUProcess::create() {
         return create_impl();
@@ -54,7 +70,7 @@ namespace oasis {
 
         m_main_process_task_handle = xTaskGetHandle("main process");
         //Init MPU6050 I2C
-        //m_mpu6050.emplace();
+        m_mpu6050.emplace(m_imu_i2c);
 
         gptimer_config_t timer_config = {
             .clk_src = GPTIMER_CLK_SRC_DEFAULT,
@@ -90,10 +106,22 @@ namespace oasis {
         while(true) {
             ulTaskNotifyTake(pdTRUE,portMAX_DELAY);
             IMUData* data = m_buffer.acquire_free();
-            //m_mpu6050->read_fifo_buffer(data);
+            m_mpu6050->read_fifo_buffer(data);
             //TODO) some filtering stuff
             //TODO) some value pushing stuff.
             //printf("IMU Process push data\n");
+            int i = 0;
+            while (true) {
+
+                if (i % 100 == 0) {
+                    printf("acc (%f %f %f) gyro (%f %f %f)\n", data[i].accel_x, data[i].accel_y, data[i].accel_z, data[i].gyro_x, data[i].gyro_y, data[i].gyro_z);
+                    EulerAngle e = accel_to_angle(data[i].accel_x, data[i].accel_y, data[i].accel_z);
+                    printf("angle : roll %f pitch %f\n", e.roll, e.pitch);
+                }
+                if (data[i].is_last)
+                    break;
+                i++;
+            }
             if (m_buffer.publish_ready(data) == false) {
                 printf("IMU buffer push failed\n");
                 continue;
