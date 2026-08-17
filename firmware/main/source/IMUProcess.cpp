@@ -2,6 +2,7 @@
 #include "IMUProcess.hpp"
 #include "IMUData.hpp"
 #include "LogProcess.hpp"
+#include "esp_log.h"
 #include <cmath>
 #include "NotifyFlags.hpp"
 
@@ -106,7 +107,17 @@ namespace oasis {
         while(true) {
             ulTaskNotifyTake(pdTRUE,portMAX_DELAY);
             IMUData* data = m_buffer.acquire_free();
-            m_mpu6050->read_fifo_buffer(data);
+            if (data == nullptr) {
+                ESP_LOGE("IMUProcess", "failed to acquire IMU buffer");
+                continue;
+            }
+            if (!m_mpu6050->read_fifo_buffer(data)) {
+                ESP_LOGW("IMUProcess", "IMU FIFO read failed or no sample available");
+                if (!m_buffer.release_free(data)) {
+                    ESP_LOGE("IMUProcess", "failed to return IMU buffer");
+                }
+                continue;
+            }
             //TODO) some filtering stuff
             //TODO) some value pushing stuff.
             //printf("IMU Process push data\n");

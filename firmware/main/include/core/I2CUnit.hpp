@@ -33,14 +33,16 @@ namespace oasis {
 
         [[nodiscard]] esp_err_t write(uint8_t address,
                                       std::span<const uint8_t> payload,
-                                      TickType_t timeout = pdMS_TO_TICKS(20));
+                                      int timeout_ms = 20);
         [[nodiscard]] esp_err_t read(uint8_t address,
                                      std::span<uint8_t> payload,
-                                     TickType_t timeout = pdMS_TO_TICKS(20));
+                                     int timeout_ms = 20);
         [[nodiscard]] esp_err_t write_read(uint8_t address,
                                            std::span<const uint8_t> write_payload,
                                            std::span<uint8_t> read_payload,
-                                           TickType_t timeout = pdMS_TO_TICKS(20));
+                                           int timeout_ms = 20);
+        [[nodiscard]] esp_err_t probe(uint8_t address,
+                                      int timeout_ms = 20);
 
     private:
         struct DeviceSlot {

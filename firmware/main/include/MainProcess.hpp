@@ -7,6 +7,7 @@
 
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
+#include "firmware.h"
 #include "core/ADCUnit.hpp"
 #include "NotifyFlags.hpp"
 
@@ -43,6 +44,7 @@ namespace oasis {
         void process_network_item();
 
         void read_extern_condition();
+        void scan_sensor_i2c_bus();
         void begin_pulse_capture();
         void service_pulse_capture();
         void finish_pulse_capture();
@@ -63,6 +65,7 @@ namespace oasis {
             .port = I2C_NUM_1,
             .sda_gpio = SENSOR_I2C_SDA_GPIO,
             .scl_gpio = SENSOR_I2C_SCL_GPIO,
+            .frequency_hz = 100'000,
         }};
         SHT31 m_sht31 {m_sensor_i2c};
         MAX30102 m_max30102 {m_sensor_i2c};

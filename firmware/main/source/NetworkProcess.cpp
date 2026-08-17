@@ -4,7 +4,6 @@
 #include "NetworkProcess.hpp"
 #include "NotifyFlags.hpp"
 #include "InitialConfigData.hpp"
-#include "core/NetworkManager.hpp"
 #include <atomic>
 #include "esp_log.h"
 namespace oasis {
@@ -51,8 +50,6 @@ namespace oasis {
         //vTaskDelay(pdMS_TO_TICKS(5000));
         //notify & sync with main process
 
-        //NetworkManager::init_wifi("SSID", "PASSWORD");
-        //NetworkManager::send_signal("http://192.168.0.4:8080/");
         //assign recv data
         //g_initial_config_data
 
@@ -69,16 +66,16 @@ namespace oasis {
     }
 
     void NetworkProcess::update_impl() {
-        constexpr char TARGET_URL[] = "http://192.168.0.4:8080/";
         while (true) {
             std::array<std::uint8_t, 1024> buffer {};
             const uint32_t length = NetworkQueue::instance().recv_and_serialize(buffer);
             if (length == 0) continue;
 
-            if (!NetworkManager::send_binary_data(TARGET_URL, buffer, length)) {
-                printf("network worker_data POST failed\n");
-            }
-
+            // Network transport is intentionally disconnected. Keep the existing
+            // serializer result visible so packet formation can be verified safely.
+            ESP_LOGI("NetworkProcess", "serialized outgoing packet: %lu bytes",
+                     static_cast<unsigned long>(length));
+            ESP_LOG_BUFFER_HEXDUMP("NetworkProcess", buffer.data(), length, ESP_LOG_INFO);
         }
     }
 

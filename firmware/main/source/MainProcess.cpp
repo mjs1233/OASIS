@@ -94,11 +94,17 @@ namespace oasis {
 
         //start network service
 
+        scan_sensor_i2c_bus();
+
+#if OASIS_ENABLE_PPG_SENSOR
         const esp_err_t max_init_result = m_max30102.initialize();
         m_max30102_ready = max_init_result == ESP_OK;
         if (!m_max30102_ready) {
             ESP_LOGE("MainProcess", "MAX30102 initialization failed: %s", esp_err_to_name(max_init_result));
         }
+#else
+        ESP_LOGI("MainProcess", "PPG sensor disabled by OASIS_ENABLE_PPG_SENSOR");
+#endif
 
         // One repeating 30-second environment cycle and one 10-second capture window.
         m_extern_cond_timer = xTimerCreate(
@@ -193,7 +199,30 @@ namespace oasis {
         }
     }
 
+    void MainProcess::scan_sensor_i2c_bus() {
+        constexpr uint8_t FIRST_I2C_ADDRESS = 0x03;
+        constexpr uint8_t LAST_I2C_ADDRESS = 0x77;
+        bool found_device = false;
+
+        ESP_LOGI("MainProcess", "I2C1 scan: SDA=%d SCL=%d", SENSOR_I2C_SDA_GPIO,
+                 SENSOR_I2C_SCL_GPIO);
+        for (uint8_t address = FIRST_I2C_ADDRESS; address <= LAST_I2C_ADDRESS; ++address) {
+            const esp_err_t result = m_sensor_i2c.probe(address, 20);
+            if (result == ESP_OK) {
+                ESP_LOGI("MainProcess", "I2C1 device found at 0x%02X", address);
+                found_device = true;
+            } else if (result != ESP_ERR_NOT_FOUND) {
+                ESP_LOGW("MainProcess", "I2C1 probe 0x%02X failed: %s", address,
+                         esp_err_to_name(result));
+            }
+        }
+        if (!found_device) {
+            ESP_LOGW("MainProcess", "I2C1 scan found no device");
+        }
+    }
+
     void MainProcess::begin_pulse_capture() {
+#if OASIS_ENABLE_PPG_SENSOR
         if (!m_max30102_ready || m_pulse_capture_active) return;
 
         m_ppg_sample_count = 0;
@@ -211,9 +240,20 @@ namespace oasis {
             }
             m_pulse_capture_active = false;
         }
+#else
+        // Preserve the 10-second cycle even without PPG hardware. finish_pulse_capture()
+        // will enqueue a worker-data packet with BPM = 0.
+        m_ppg_sample_count = 0;
+        m_pulse_capture_active = true;
+        if (xTimerStart(m_pulse_capture_timer, 0) != pdPASS) {
+            ESP_LOGE("MainProcess", "pulse timer start failed while PPG is disabled");
+            m_pulse_capture_active = false;
+        }
+#endif
     }
 
     void MainProcess::service_pulse_capture() {
+#if OASIS_ENABLE_PPG_SENSOR
         if (!m_pulse_capture_active) return;
 
         size_t received = 0;
@@ -230,6 +270,7 @@ namespace oasis {
                 ESP_LOGE("MainProcess", "full-buffer notification failed");
             }
         }
+#endif
     }
 
     float MainProcess::calculate_bpm() const {
@@ -260,11 +301,13 @@ namespace oasis {
 
     void MainProcess::finish_pulse_capture() {
         if (!m_pulse_capture_active) return;
+#if OASIS_ENABLE_PPG_SENSOR
         service_pulse_capture(); // Drain samples produced since the previous IMU callback.
         const esp_err_t stop_result = m_max30102.stop_measurement();
         if (stop_result != ESP_OK) {
             ESP_LOGE("MainProcess", "MAX30102 stop failed: %s", esp_err_to_name(stop_result));
         }
+#endif
         m_pulse_capture_active = false;
 
         const float bpm = calculate_bpm();

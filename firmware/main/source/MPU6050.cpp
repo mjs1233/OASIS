@@ -8,6 +8,8 @@ namespace oasis {
     namespace {
         constexpr char TAG[] = "MPU6050";
         constexpr uint8_t MPU6050_ADDRESS = 0x68;
+        constexpr uint8_t WHO_AM_I_MPU6050 = 0x68;
+        constexpr uint8_t WHO_AM_I_MPU6500 = 0x70;
 
         constexpr uint8_t REG_SMPLRT_DIV = 0x19;
         constexpr uint8_t REG_CONFIG = 0x1A;
@@ -23,18 +25,23 @@ namespace oasis {
 
         esp_err_t write_reg(I2CUnit& i2c, uint8_t reg, uint8_t value) {
             const uint8_t payload[2] = {reg, value};
-            return i2c.write(MPU6050_ADDRESS, payload, pdMS_TO_TICKS(1000));
+            return i2c.write(MPU6050_ADDRESS, payload, 1000);
         }
 
         esp_err_t read_regs(I2CUnit& i2c, uint8_t reg, uint8_t* data, size_t length) {
             return i2c.write_read(MPU6050_ADDRESS, std::span<const uint8_t>(&reg, 1),
-                                  std::span<uint8_t>(data, length), pdMS_TO_TICKS(1000));
+                                  std::span<uint8_t>(data, length), 1000);
         }
     }
 
     MPU6050::MPU6050(I2CUnit& i2c) : m_i2c(i2c) {
-        ESP_ERROR_CHECK(init());
-        ESP_LOGI(TAG, "MPU6050 construction complete, FIFO sampling running.");
+        const esp_err_t result = init();
+        m_initialized = result == ESP_OK;
+        if (m_initialized) {
+            ESP_LOGI(TAG, "IMU construction complete, FIFO sampling running.");
+        } else {
+            ESP_LOGE(TAG, "IMU initialization failed: %s", esp_err_to_name(result));
+        }
     }
 
     esp_err_t MPU6050::init() {
@@ -44,10 +51,12 @@ namespace oasis {
             ESP_LOGE(TAG, "WHO_AM_I read failed: %s", esp_err_to_name(result));
             return result;
         }
-        if (who_am_i != MPU6050_ADDR) {
+        if (who_am_i != WHO_AM_I_MPU6050 && who_am_i != WHO_AM_I_MPU6500) {
             ESP_LOGE(TAG, "unexpected WHO_AM_I: 0x%02X", who_am_i);
             return ESP_ERR_INVALID_RESPONSE;
         }
+        ESP_LOGI(TAG, "WHO_AM_I = 0x%02X (%s)", who_am_i,
+                 who_am_i == WHO_AM_I_MPU6500 ? "MPU6500-compatible" : "MPU6050");
 
         if ((result = write_reg(m_i2c, REG_PWR_MGMT_1, 0x80)) != ESP_OK) return result;
         vTaskDelay(pdMS_TO_TICKS(100));
@@ -65,7 +74,7 @@ namespace oasis {
     }
 
     bool MPU6050::read_fifo_buffer(IMUData* data) {
-        if (data == nullptr) return false;
+        if (!m_initialized || data == nullptr) return false;
 
         uint8_t count_buf[2] {};
         esp_err_t result = read_regs(m_i2c, REG_FIFO_COUNTH, count_buf, sizeof(count_buf));

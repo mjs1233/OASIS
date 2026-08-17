@@ -1,7 +1,3 @@
-//
-// Created by tgian on 26. 7. 24..
-//
-
 #ifndef FIRMWARE_ADCUNIT_HPP
 #define FIRMWARE_ADCUNIT_HPP
 #include <cinttypes>
@@ -13,22 +9,6 @@
 #include "freertos/semphr.h"
 
 namespace oasis {
-    namespace __details {
-        constexpr uint32_t default_adc_unit_num = 0;
-
-        class OneshotADC {
-
-        };
-
-        class ContinuousADC {
-        public:
-            ContinuousADC() {
-
-            }
-        };
-    }
-
-
     class ADCUnit {
     public:
         ADCUnit() {
@@ -64,10 +44,6 @@ namespace oasis {
                 return false;
             }
 
-        };
-
-        bool read_continuous(size_t length, const std::function<bool(const std::array<uint8_t,256>& buffer)>& callback) {
-            return false;
         };
 
     private:

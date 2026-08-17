@@ -24,6 +24,7 @@ namespace oasis {
         static constexpr size_t   MAX_SAMPLES       = 24; //
 
         I2CUnit& m_i2c;
+        bool m_initialized = false;
     };
 }
 #endif

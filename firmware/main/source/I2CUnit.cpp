@@ -78,43 +78,52 @@ namespace oasis {
         return result;
     }
 
-    esp_err_t I2CUnit::write(uint8_t address, std::span<const uint8_t> payload, TickType_t timeout) {
-        esp_err_t result = lock(timeout);
+    esp_err_t I2CUnit::write(uint8_t address, std::span<const uint8_t> payload, int timeout_ms) {
+        esp_err_t result = lock(pdMS_TO_TICKS(timeout_ms));
         if (result != ESP_OK) return result;
 
         i2c_master_dev_handle_t device = nullptr;
         result = get_device_locked(address, device);
         if (result == ESP_OK) {
-            result = i2c_master_transmit(device, payload.data(), payload.size(), timeout);
+            result = i2c_master_transmit(device, payload.data(), payload.size(), timeout_ms);
         }
         unlock();
         return result;
     }
 
-    esp_err_t I2CUnit::read(uint8_t address, std::span<uint8_t> payload, TickType_t timeout) {
-        esp_err_t result = lock(timeout);
+    esp_err_t I2CUnit::read(uint8_t address, std::span<uint8_t> payload, int timeout_ms) {
+        esp_err_t result = lock(pdMS_TO_TICKS(timeout_ms));
         if (result != ESP_OK) return result;
 
         i2c_master_dev_handle_t device = nullptr;
         result = get_device_locked(address, device);
         if (result == ESP_OK) {
-            result = i2c_master_receive(device, payload.data(), payload.size(), timeout);
+            result = i2c_master_receive(device, payload.data(), payload.size(), timeout_ms);
         }
         unlock();
         return result;
     }
 
     esp_err_t I2CUnit::write_read(uint8_t address, std::span<const uint8_t> write_payload,
-                                  std::span<uint8_t> read_payload, TickType_t timeout) {
-        esp_err_t result = lock(timeout);
+                                  std::span<uint8_t> read_payload, int timeout_ms) {
+        esp_err_t result = lock(pdMS_TO_TICKS(timeout_ms));
         if (result != ESP_OK) return result;
 
         i2c_master_dev_handle_t device = nullptr;
         result = get_device_locked(address, device);
         if (result == ESP_OK) {
             result = i2c_master_transmit_receive(device, write_payload.data(), write_payload.size(),
-                                                 read_payload.data(), read_payload.size(), timeout);
+                                                 read_payload.data(), read_payload.size(), timeout_ms);
         }
+        unlock();
+        return result;
+    }
+
+    esp_err_t I2CUnit::probe(uint8_t address, int timeout_ms) {
+        esp_err_t result = lock(pdMS_TO_TICKS(timeout_ms));
+        if (result != ESP_OK) return result;
+
+        result = i2c_master_probe(m_bus, address, timeout_ms);
         unlock();
         return result;
     }
