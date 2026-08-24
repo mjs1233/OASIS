@@ -1,5 +1,8 @@
 #include "MPU6050.hpp"
 
+#include <algorithm>
+#include <array>
+
 #include "esp_log.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -86,22 +89,40 @@ namespace oasis {
         const uint16_t count = (static_cast<uint16_t>(count_buf[0]) << 8) | count_buf[1];
         if (count < BYTES_PER_SAMPLE) return false;
 
-        uint16_t sample_count = count / BYTES_PER_SAMPLE;
-        if (sample_count > MAX_SAMPLES) {
-            ESP_LOGW(TAG, "FIFO has %u samples; reading newest %u", sample_count,
-                     static_cast<unsigned>(MAX_SAMPLES));
-            sample_count = MAX_SAMPLES;
+        const uint16_t available_samples = count / BYTES_PER_SAMPLE;
+        const uint16_t sample_count = std::min<uint16_t>(available_samples, MAX_SAMPLES);
+        size_t discard_bytes = static_cast<size_t>(available_samples - sample_count) * BYTES_PER_SAMPLE;
+
+        if (discard_bytes != 0) {
+            constexpr size_t DISCARD_CHUNK_SIZE = BYTES_PER_SAMPLE * 4;
+            std::array<uint8_t, DISCARD_CHUNK_SIZE> discard_buffer {};
+            const size_t original_discard_bytes = discard_bytes;
+
+            while (discard_bytes != 0) {
+                const size_t chunk_size = std::min(discard_bytes, discard_buffer.size());
+                result = read_regs(m_i2c, REG_FIFO_R_W, discard_buffer.data(), chunk_size);
+                if (result != ESP_OK) {
+                    ESP_LOGW(TAG, "FIFO stale-data discard failed: %s", esp_err_to_name(result));
+                    return false;
+                }
+                discard_bytes -= chunk_size;
+            }
+
+            ESP_LOGW(TAG, "FIFO has %u samples; discarded %u and kept newest %u",
+                     static_cast<unsigned>(available_samples),
+                     static_cast<unsigned>(original_discard_bytes / BYTES_PER_SAMPLE),
+                     static_cast<unsigned>(sample_count));
         }
 
-        uint8_t fifo_buf[MAX_SAMPLES * BYTES_PER_SAMPLE] {};
-        result = read_regs(m_i2c, REG_FIFO_R_W, fifo_buf, sample_count * BYTES_PER_SAMPLE);
+        std::array<uint8_t, MAX_SAMPLES * BYTES_PER_SAMPLE> fifo_buf {};
+        result = read_regs(m_i2c, REG_FIFO_R_W, fifo_buf.data(), sample_count * BYTES_PER_SAMPLE);
         if (result != ESP_OK) {
             ESP_LOGW(TAG, "FIFO burst read failed: %s", esp_err_to_name(result));
             return false;
         }
 
         for (uint16_t i = 0; i < sample_count; ++i) {
-            const uint8_t* sample = &fifo_buf[i * BYTES_PER_SAMPLE];
+            const uint8_t* sample = fifo_buf.data() + i * BYTES_PER_SAMPLE;
             const int16_t accel_x = static_cast<int16_t>((sample[0] << 8) | sample[1]);
             const int16_t accel_y = static_cast<int16_t>((sample[2] << 8) | sample[3]);
             const int16_t accel_z = static_cast<int16_t>((sample[4] << 8) | sample[5]);

@@ -911,6 +911,17 @@ CONFIG_PARTITION_TABLE_MD5=y
 # end of Partition Table
 
 #
+# OASIS network
+#
+# default:
+CONFIG_OASIS_WIFI_SSID=""
+# default:
+CONFIG_OASIS_WIFI_PASSWORD=""
+# default:
+CONFIG_OASIS_SERVER_URL=""
+# end of OASIS network
+
+#
 # Compiler options
 #
 CONFIG_COMPILER_OPTIMIZATION_DEBUG=y
