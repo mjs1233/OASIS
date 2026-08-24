@@ -1,7 +1,6 @@
 #include <freertos/FreeRTOS.h>
 #include "IMUProcess.hpp"
 #include "IMUData.hpp"
-#include "LogProcess.hpp"
 #include "esp_log.h"
 #include <cmath>
 #include "NotifyFlags.hpp"
@@ -99,8 +98,6 @@ namespace oasis {
         ESP_ERROR_CHECK(gptimer_register_event_callbacks(gptimer, &timer_callback,m_task_handle));
         ESP_ERROR_CHECK(gptimer_enable(gptimer));
         ESP_ERROR_CHECK(gptimer_start(gptimer));
-        oasis::LogProcess::write_text("[MAIN]", "MAIN PROCESS INITIALIZED");
-
     }
 
     void IMUProcess::update_impl() {

@@ -12,5 +12,4 @@ set(COMPONENT_SRCS
         "source/SHT31.cpp"
         "source/MAX30102.cpp"
         "source/WorkerDataSolver.cpp"
-        "source/LogProcess.cpp"
 )
