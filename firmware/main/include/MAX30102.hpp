@@ -18,6 +18,7 @@ namespace oasis {
 
         // Sets a 100 SPS Red+IR configuration. Call start_measurement() only
         // after environment sensors have completed their cycle-start reads.
+        [[nodiscard]] esp_err_t check_connection();
         [[nodiscard]] esp_err_t initialize();
         [[nodiscard]] esp_err_t start_measurement();
         [[nodiscard]] esp_err_t stop_measurement();

@@ -9,6 +9,31 @@
 #include "../include/NTC.hpp"
 
 namespace oasis {
+    namespace {
+#if OASIS_ENABLE_PPG_SENSOR
+        void log_pulse_sensor_failure(const char* operation, esp_err_t error) {
+            const char* reason = "unexpected I2C or driver error";
+            switch (error) {
+                case ESP_ERR_NOT_FOUND:
+                    reason = "no ACK; check sensor power, SDA/SCL wiring, pull-ups, and address 0x57";
+                    break;
+                case ESP_ERR_TIMEOUT:
+                    reason = "I2C timeout; check a stuck bus, wiring, pull-ups, or clock speed";
+                    break;
+                case ESP_ERR_INVALID_RESPONSE:
+                    reason = "a device answered at 0x57, but its MAX30102 identity was invalid";
+                    break;
+                case ESP_ERR_INVALID_STATE:
+                    reason = "I2C driver or bus is not in a usable state";
+                    break;
+                default:
+                    break;
+            }
+            ESP_LOGE("MainProcess", "MAX30102 %s failed: %s (0x%x); reason: %s",
+                     operation, esp_err_to_name(error), static_cast<unsigned>(error), reason);
+        }
+#endif
+    }
 
     MainProcess::MainProcess() {
     }
@@ -20,6 +45,12 @@ namespace oasis {
         if (m_pulse_capture_timer != nullptr && xTimerDelete(m_pulse_capture_timer, portMAX_DELAY) != pdPASS) {
             ESP_LOGE("MainProcess", "pulse timer deletion failed");
         }
+#if OASIS_ENABLE_PPG_SENSOR
+        if (m_pulse_fifo_service_timer != nullptr &&
+            xTimerDelete(m_pulse_fifo_service_timer, portMAX_DELAY) != pdPASS) {
+            ESP_LOGE("MainProcess", "pulse FIFO service timer deletion failed");
+        }
+#endif
     }
 
     bool MainProcess::create() {
@@ -49,12 +80,13 @@ namespace oasis {
             return false;
         }
 
+#if OASIS_ENABLE_NTC_SENSOR
         // ADC1 channel 1 is GPIO2 on ESP32-S3. ADCUnit stores it in slot 0.
         if (m_adc_unit_0.add_oneshot_gpio(NTC_ADC_GPIO) < 0) {
             ESP_LOGE("MainProcess", "NTC ADC GPIO registration failed");
             return false;
         }
-        //m_adc_unit_0.add_channel(ADC_BATTERY_CHANNEL_NUM);
+#endif
 
 
         return true;
@@ -74,6 +106,15 @@ namespace oasis {
             ESP_LOGE("MainProcess", "pulse-capture notification failed");
         }
     }
+
+#if OASIS_ENABLE_PPG_SENSOR
+    void MainProcess::pulse_fifo_service_timer_callback(TimerHandle_t xtimer) {
+        auto* self = static_cast<MainProcess*>(pvTimerGetTimerID(xtimer));
+        if (xTaskNotify(self->m_task_handle, notify::TIMER_PULSE_FIFO_SERVICE, eSetBits) != pdPASS) {
+            ESP_LOGE("MainProcess", "pulse FIFO service notification failed");
+        }
+    }
+#endif
 
     void MainProcess::init_impl() {
         //startup seq.
@@ -96,12 +137,16 @@ namespace oasis {
 
         scan_sensor_i2c_bus();
 
+#if !OASIS_ENABLE_NTC_SENSOR
+        ESP_LOGI("MainProcess", "NTC sensor disabled by OASIS_ENABLE_NTC_SENSOR");
+#endif
+
+#if !OASIS_ENABLE_SHT31_SENSOR
+        ESP_LOGI("MainProcess", "SHT31 sensor disabled by OASIS_ENABLE_SHT31_SENSOR");
+#endif
+
 #if OASIS_ENABLE_PPG_SENSOR
-        const esp_err_t max_init_result = m_max30102.initialize();
-        m_max30102_ready = max_init_result == ESP_OK;
-        if (!m_max30102_ready) {
-            ESP_LOGE("MainProcess", "MAX30102 initialization failed: %s", esp_err_to_name(max_init_result));
-        }
+        ESP_LOGI("MainProcess", "MAX30102 30-second health monitoring enabled");
 #else
         ESP_LOGI("MainProcess", "PPG sensor disabled by OASIS_ENABLE_PPG_SENSOR");
 #endif
@@ -121,7 +166,20 @@ namespace oasis {
             this,
             pulse_capture_timer_callback
             );
-        configASSERT(m_extern_cond_timer != nullptr && m_pulse_capture_timer != nullptr);
+#if OASIS_ENABLE_PPG_SENSOR
+        m_pulse_fifo_service_timer = xTimerCreate(
+            "pulse FIFO service timer",
+            pdMS_TO_TICKS(PULSE_FIFO_SERVICE_MS),
+            pdTRUE,
+            this,
+            pulse_fifo_service_timer_callback
+            );
+#endif
+        configASSERT(m_extern_cond_timer != nullptr);
+        configASSERT(m_pulse_capture_timer != nullptr);
+#if OASIS_ENABLE_PPG_SENSOR
+        configASSERT(m_pulse_fifo_service_timer != nullptr);
+#endif
         if (xTimerStart(m_extern_cond_timer, 0) != pdPASS) {
             ESP_LOGE("MainProcess", "environment timer start failed");
             return;
@@ -145,18 +203,28 @@ namespace oasis {
             if (xTaskNotifyWait(0x0, 0xFFFFFFFF,&notification_value, portMAX_DELAY) == true) {
                 std::atomic_thread_fence(std::memory_order_acquire);
 
+#if OASIS_ENABLE_IMU_SENSOR
                 if (notification_value & notify::ISR_IMU_BUFFER_FULL) {
                     //do IMU buffer flush.
                     //printf("Main Process, recv imu buffer\n");
                     imu_buffer_handle();
-                    service_pulse_capture();
                     process_network_item();
                 }
+#endif
 
                 if (notification_value & notify::TIMER_EXTREN_COND_CYCLE) {
                     read_extern_condition();
+#if OASIS_ENABLE_PPG_SENSOR
+                    check_pulse_sensor();
+#endif
                     begin_pulse_capture();
                 }
+
+#if OASIS_ENABLE_PPG_SENSOR
+                if (notification_value & notify::TIMER_PULSE_FIFO_SERVICE) {
+                    service_pulse_capture();
+                }
+#endif
 
                 if (notification_value & notify::TIMER_PULSE_CAPTURE_END) {
                     finish_pulse_capture();
@@ -188,8 +256,11 @@ namespace oasis {
     }
 
     void MainProcess::read_extern_condition() {
+#if OASIS_ENABLE_NTC_SENSOR
         m_last_ntc_temperature_c = m_ntc.read();
         printf("NTC : %f\n", m_last_ntc_temperature_c);
+#endif
+#if OASIS_ENABLE_SHT31_SENSOR
         const esp_err_t result = m_sht31.read_measurement(m_last_sht31);
         if (result == ESP_OK) {
             printf("SHT31 : %0.2f C, %0.2f %%RH\n", m_last_sht31.temperature_c,
@@ -197,9 +268,11 @@ namespace oasis {
         } else {
             printf("SHT31 read failed: %s\n", esp_err_to_name(result));
         }
+#endif
     }
 
     void MainProcess::scan_sensor_i2c_bus() {
+#if OASIS_ENABLE_SHT31_SENSOR || OASIS_ENABLE_PPG_SENSOR
         constexpr uint8_t FIRST_I2C_ADDRESS = 0x03;
         constexpr uint8_t LAST_I2C_ADDRESS = 0x77;
         bool found_device = false;
@@ -219,16 +292,53 @@ namespace oasis {
         if (!found_device) {
             ESP_LOGW("MainProcess", "I2C1 scan found no device");
         }
+#else
+        ESP_LOGI("MainProcess", "I2C1 sensor bus disabled; SHT31 and PPG are both off");
+#endif
     }
+
+#if OASIS_ENABLE_PPG_SENSOR
+    void MainProcess::check_pulse_sensor() {
+        const bool was_ready = m_max30102_ready;
+        const esp_err_t health_result = m_max30102.check_connection();
+        if (health_result != ESP_OK) {
+            m_max30102_ready = false;
+            log_pulse_sensor_failure("30-second health check", health_result);
+            if (was_ready) {
+                ESP_LOGE("MainProcess", "MAX30102 connection lost; capture is disabled until recovery");
+            }
+            return;
+        }
+
+        // Refresh the configuration after every successful health check. This
+        // also recovers a sensor that power-cycled between two 30-second checks
+        // and is answering again with reset/default register values.
+        const esp_err_t init_result = m_max30102.initialize();
+        if (init_result != ESP_OK) {
+            m_max30102_ready = false;
+            log_pulse_sensor_failure("reinitialization", init_result);
+            return;
+        }
+
+        m_max30102_ready = true;
+        ESP_LOGI("MainProcess", "MAX30102 %s; configuration refreshed and ready for capture",
+                 was_ready ? "is alive" : "detected/recovered");
+    }
+#endif
 
     void MainProcess::begin_pulse_capture() {
 #if OASIS_ENABLE_PPG_SENSOR
-        if (!m_max30102_ready || m_pulse_capture_active) return;
+        if (!m_max30102_ready) {
+            ESP_LOGW("MainProcess", "MAX30102 capture skipped: sensor is not ready");
+            return;
+        }
+        if (m_pulse_capture_active) return;
 
         m_ppg_sample_count = 0;
         const esp_err_t result = m_max30102.start_measurement();
         if (result != ESP_OK) {
-            printf("MAX30102 start failed: %s\n", esp_err_to_name(result));
+            m_max30102_ready = false;
+            log_pulse_sensor_failure("measurement start", result);
             return;
         }
         m_pulse_capture_active = true;
@@ -237,6 +347,19 @@ namespace oasis {
             const esp_err_t stop_result = m_max30102.stop_measurement();
             if (stop_result != ESP_OK) {
                 ESP_LOGE("MainProcess", "MAX30102 stop after timer failure failed: %s", esp_err_to_name(stop_result));
+            }
+            m_pulse_capture_active = false;
+            return;
+        }
+        if (xTimerStart(m_pulse_fifo_service_timer, 0) != pdPASS) {
+            ESP_LOGE("MainProcess", "pulse FIFO service timer start failed");
+            if (xTimerStop(m_pulse_capture_timer, portMAX_DELAY) != pdPASS) {
+                ESP_LOGE("MainProcess", "pulse timer stop after FIFO timer failure failed");
+            }
+            const esp_err_t stop_result = m_max30102.stop_measurement();
+            if (stop_result != ESP_OK) {
+                m_max30102_ready = false;
+                log_pulse_sensor_failure("stop after FIFO timer failure", stop_result);
             }
             m_pulse_capture_active = false;
         }
@@ -260,7 +383,11 @@ namespace oasis {
         const esp_err_t result = m_max30102.read_fifo(
             std::span<PPGSample>(m_ppg_samples).subspan(m_ppg_sample_count), received);
         if (result != ESP_OK) {
-            printf("MAX30102 FIFO read failed: %s\n", esp_err_to_name(result));
+            m_max30102_ready = false;
+            log_pulse_sensor_failure("FIFO read", result);
+            if (xTaskNotify(m_task_handle, notify::TIMER_PULSE_CAPTURE_END, eSetBits) != pdPASS) {
+                ESP_LOGE("MainProcess", "FIFO failure end notification failed");
+            }
             return;
         }
         m_ppg_sample_count += received;
@@ -302,10 +429,16 @@ namespace oasis {
     void MainProcess::finish_pulse_capture() {
         if (!m_pulse_capture_active) return;
 #if OASIS_ENABLE_PPG_SENSOR
-        service_pulse_capture(); // Drain samples produced since the previous IMU callback.
+        if (xTimerStop(m_pulse_fifo_service_timer, portMAX_DELAY) != pdPASS) {
+            ESP_LOGE("MainProcess", "pulse FIFO service timer stop failed");
+        }
+        if (m_max30102_ready) {
+            service_pulse_capture(); // Drain samples produced since the last 100 ms service tick.
+        }
         const esp_err_t stop_result = m_max30102.stop_measurement();
         if (stop_result != ESP_OK) {
-            ESP_LOGE("MainProcess", "MAX30102 stop failed: %s", esp_err_to_name(stop_result));
+            m_max30102_ready = false;
+            log_pulse_sensor_failure("measurement stop", stop_result);
         }
 #endif
         m_pulse_capture_active = false;
@@ -329,9 +462,12 @@ namespace oasis {
         item.battery_voltage = 0;
 
         const bool queued = NetworkQueue::instance().enqueue(item);
-        ESP_LOGI("MainProcess", "worker_data enqueue=%s temp=%u hum=%u bpm=%u battery=%u ntc=%.2f",
+        ESP_LOGI("MainProcess", "worker_data enqueue=%s temp=%u hum=%u bpm=%u battery=%u",
                  queued ? "true" : "false", item.raw_temp, item.raw_hum, item.raw_bpm,
-                 item.battery_voltage, m_last_ntc_temperature_c);
+                 item.battery_voltage);
+#if OASIS_ENABLE_NTC_SENSOR
+        ESP_LOGI("MainProcess", "NTC temperature=%.2f C", m_last_ntc_temperature_c);
+#endif
     }
 
 }

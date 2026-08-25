@@ -7,6 +7,7 @@
 
 
 namespace oasis {
+#if OASIS_ENABLE_IMU_SENSOR
     namespace {
 
         struct EulerAngle {
@@ -21,6 +22,7 @@ namespace oasis {
             return e;
         }
     }
+#endif
 
 
     bool IMUProcess::create() {
@@ -31,7 +33,6 @@ namespace oasis {
         auto pIMUProcess = static_cast<IMUProcess*>(pvParameter);
         pIMUProcess->init_impl();
         pIMUProcess->update_impl();
-        vTaskDelete(nullptr);
     }
 
     bool IMUProcess::isr_callback(
@@ -66,8 +67,7 @@ namespace oasis {
     }
 
     void IMUProcess::init_impl() {
-
-
+#if OASIS_ENABLE_IMU_SENSOR
         m_main_process_task_handle = xTaskGetHandle("main process");
         //Init MPU6050 I2C
         m_mpu6050.emplace(m_imu_i2c);
@@ -98,11 +98,15 @@ namespace oasis {
         ESP_ERROR_CHECK(gptimer_register_event_callbacks(gptimer, &timer_callback,m_task_handle));
         ESP_ERROR_CHECK(gptimer_enable(gptimer));
         ESP_ERROR_CHECK(gptimer_start(gptimer));
+#else
+        ESP_LOGI("IMUProcess", "IMU sensor disabled by OASIS_ENABLE_IMU_SENSOR; task remains blocked");
+#endif
     }
 
-    void IMUProcess::update_impl() {
+    [[noreturn]] void IMUProcess::update_impl() {
         while(true) {
             ulTaskNotifyTake(pdTRUE,portMAX_DELAY);
+#if OASIS_ENABLE_IMU_SENSOR
             IMUData* data = m_buffer.acquire_free();
             if (data == nullptr) {
                 ESP_LOGE("IMUProcess", "failed to acquire IMU buffer");
@@ -135,6 +139,7 @@ namespace oasis {
                 continue;
             }
             xTaskNotify(m_main_process_task_handle, notify::ISR_IMU_BUFFER_FULL, eSetBits);
+#endif
         }
     }
 
