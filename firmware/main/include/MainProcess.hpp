@@ -19,6 +19,7 @@
 #include "NTC.hpp"
 #include "SHT31.hpp"
 #include "MAX30102.hpp"
+#include "WorkerDataSolver.hpp"
 
 namespace oasis {
     class MainProcess {
@@ -92,6 +93,10 @@ namespace oasis {
         SHT31Measurement m_last_sht31 {};
         std::array<PPGSample, 1024> m_ppg_samples {};
         size_t m_ppg_sample_count = 0;
+        std::array<IMUData, 2048> m_kcal_imu_samples {};
+        size_t m_kcal_imu_sample_count = 0;
+        WorkerDataSolver m_worker_data_solver {};
+        float m_last_kcal_per_min = 0.0f;
         bool m_pulse_capture_active = false;
 #if OASIS_ENABLE_PPG_SENSOR
         bool m_max30102_ready = false;
@@ -107,6 +112,8 @@ namespace oasis {
         static constexpr uint32_t PRIORITY = 2;
         static constexpr uint32_t ENVIRONMENT_CYCLE_MS = 30'000;
         static constexpr uint32_t PULSE_CAPTURE_MS = 10'000;
+        static constexpr uint32_t IMU_SAMPLE_RATE_HZ = 200;
+        static constexpr uint32_t PULSE_SAMPLE_RATE_HZ = 100;
 #if OASIS_ENABLE_PPG_SENSOR
         static constexpr uint32_t PULSE_FIFO_SERVICE_MS = 100;
 #endif

@@ -244,8 +244,15 @@ namespace oasis {
             if (imu_data == nullptr) {
                 break;
             }
-            //read other data.
-            //release
+            if (m_pulse_capture_active) {
+                constexpr size_t MAX_IMU_FIFO_SAMPLES = 24;
+                for (size_t i = 0; i < MAX_IMU_FIFO_SAMPLES; ++i) {
+                    if (m_kcal_imu_sample_count < m_kcal_imu_samples.size()) {
+                        m_kcal_imu_samples[m_kcal_imu_sample_count++] = imu_data[i];
+                    }
+                    if (imu_data[i].is_last) break;
+                }
+            }
             imu_buffer.release_free(imu_data);
         }
     }
@@ -335,6 +342,7 @@ namespace oasis {
         if (m_pulse_capture_active) return;
 
         m_ppg_sample_count = 0;
+        m_kcal_imu_sample_count = 0;
         const esp_err_t result = m_max30102.start_measurement();
         if (result != ESP_OK) {
             m_max30102_ready = false;
@@ -367,6 +375,7 @@ namespace oasis {
         // Preserve the 10-second cycle even without PPG hardware. finish_pulse_capture()
         // will enqueue a worker-data packet with BPM = 0.
         m_ppg_sample_count = 0;
+        m_kcal_imu_sample_count = 0;
         m_pulse_capture_active = true;
         if (xTimerStart(m_pulse_capture_timer, 0) != pdPASS) {
             ESP_LOGE("MainProcess", "pulse timer start failed while PPG is disabled");
@@ -443,9 +452,16 @@ namespace oasis {
 #endif
         m_pulse_capture_active = false;
 
+        m_last_kcal_per_min = m_worker_data_solver.solve_kcal_per_min(
+            IMU_SAMPLE_RATE_HZ,
+            PULSE_SAMPLE_RATE_HZ,
+            std::span<const IMUData>(m_kcal_imu_samples.data(), m_kcal_imu_sample_count),
+            std::span<const PPGSample>(m_ppg_samples.data(), m_ppg_sample_count));
+
         const float bpm = calculate_bpm();
-        printf("Pulse capture complete: %u samples, BPM: %0.1f\n",
-               static_cast<unsigned>(m_ppg_sample_count), bpm);
+        printf("Pulse capture complete: %u samples, IMU: %u samples, BPM: %0.1f, kcal/min: %0.2f\n",
+               static_cast<unsigned>(m_ppg_sample_count),
+               static_cast<unsigned>(m_kcal_imu_sample_count), bpm, m_last_kcal_per_min);
 
         const auto to_u8 = [](float value) -> uint8_t {
             if (!std::isfinite(value)) return 0;
