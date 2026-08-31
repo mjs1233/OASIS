@@ -1,10 +1,29 @@
 #include <freertos/FreeRTOS.h>
 #include "IMUProcess.hpp"
 #include "IMUData.hpp"
+#include "esp_log.h"
+#include <cmath>
 #include "NotifyFlags.hpp"
 
 
 namespace oasis {
+#if OASIS_ENABLE_IMU_SENSOR
+    namespace {
+
+        struct EulerAngle {
+            float roll;   // deg, X축 기준 회전
+            float pitch;  // deg, Y축 기준 회전
+        };
+
+        EulerAngle accel_to_angle(float ax, float ay, float az) {
+            EulerAngle e;
+            e.roll  = atan2f(ay, az) * 180.0f / M_PI;
+            e.pitch = atan2f(-ax, sqrtf(ay * ay + az * az)) * 180.0f / M_PI;
+            return e;
+        }
+    }
+#endif
+
 
     bool IMUProcess::create() {
         return create_impl();
@@ -14,7 +33,6 @@ namespace oasis {
         auto pIMUProcess = static_cast<IMUProcess*>(pvParameter);
         pIMUProcess->init_impl();
         pIMUProcess->update_impl();
-        vTaskDelete(nullptr);
     }
 
     bool IMUProcess::isr_callback(
@@ -49,10 +67,10 @@ namespace oasis {
     }
 
     void IMUProcess::init_impl() {
-
+#if OASIS_ENABLE_IMU_SENSOR
         m_main_process_task_handle = xTaskGetHandle("main process");
         //Init MPU6050 I2C
-        //m_mpu6050.emplace();
+        m_mpu6050.emplace(m_imu_i2c);
 
         gptimer_config_t timer_config = {
             .clk_src = GPTIMER_CLK_SRC_DEFAULT,
@@ -80,21 +98,48 @@ namespace oasis {
         ESP_ERROR_CHECK(gptimer_register_event_callbacks(gptimer, &timer_callback,m_task_handle));
         ESP_ERROR_CHECK(gptimer_enable(gptimer));
         ESP_ERROR_CHECK(gptimer_start(gptimer));
-
+#else
+        ESP_LOGI("IMUProcess", "IMU sensor disabled by OASIS_ENABLE_IMU_SENSOR; task remains blocked");
+#endif
     }
 
-    void IMUProcess::update_impl() {
+    [[noreturn]] void IMUProcess::update_impl() {
         while(true) {
             ulTaskNotifyTake(pdTRUE,portMAX_DELAY);
+#if OASIS_ENABLE_IMU_SENSOR
             IMUData* data = m_buffer.acquire_free();
-            //m_mpu6050->read_fifo_buffer(data);
+            if (data == nullptr) {
+                ESP_LOGE("IMUProcess", "failed to acquire IMU buffer");
+                continue;
+            }
+            if (!m_mpu6050->read_fifo_buffer(data)) {
+                ESP_LOGW("IMUProcess", "IMU FIFO read failed or no sample available");
+                if (!m_buffer.release_free(data)) {
+                    ESP_LOGE("IMUProcess", "failed to return IMU buffer");
+                }
+                continue;
+            }
             //TODO) some filtering stuff
             //TODO) some value pushing stuff.
-            printf("IMU Process push data\n");
+            //printf("IMU Process push data\n");
+            int i = 0;
+            while (true) {
+
+                if (i % 100 == 0) {
+                    printf("acc (%f %f %f) gyro (%f %f %f)\n", data[i].accel_x, data[i].accel_y, data[i].accel_z, data[i].gyro_x, data[i].gyro_y, data[i].gyro_z);
+                    EulerAngle e = accel_to_angle(data[i].accel_x, data[i].accel_y, data[i].accel_z);
+                    printf("angle : roll %f pitch %f\n", e.roll, e.pitch);
+                }
+                if (data[i].is_last)
+                    break;
+                i++;
+            }
             if (m_buffer.publish_ready(data) == false) {
                 printf("IMU buffer push failed\n");
+                continue;
             }
             xTaskNotify(m_main_process_task_handle, notify::ISR_IMU_BUFFER_FULL, eSetBits);
+#endif
         }
     }
 

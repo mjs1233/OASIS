@@ -10,7 +10,9 @@ namespace oasis::notify {
         NETWORK_INITIAL_CONFIG_SYNC = 1 << 1,
 
         ISR_IMU_BUFFER_FULL = 1 << 2,
-        TIMER_EXTREN_COND_CYCLE = 1 << 3
+        TIMER_EXTREN_COND_CYCLE = 1 << 3,
+        TIMER_PULSE_CAPTURE_END = 1 << 4,
+        TIMER_PULSE_FIFO_SERVICE = 1 << 5
     };
 }
 

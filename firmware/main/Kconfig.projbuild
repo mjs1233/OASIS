@@ -1,0 +1,18 @@
+menu "OASIS network"
+
+config OASIS_WIFI_SSID
+    string "Wi-Fi SSID"
+    default ""
+
+config OASIS_WIFI_PASSWORD
+    string "Wi-Fi password"
+    default ""
+
+config OASIS_SERVER_URL
+    string "Telemetry GET endpoint"
+    default ""
+    help
+        Base URL that receives OASIS query strings, for example
+        http://192.168.0.10:8080/oasis.
+
+endmenu

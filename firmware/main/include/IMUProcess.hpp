@@ -8,8 +8,10 @@
 
 #include "freertos/FreeRTOS.h"
 #include "driver/gptimer.h"
+#include "firmware.h"
 #include "IMUData.hpp"
 #include "core/BufferPool.hpp"
+#include "core/I2CUnit.hpp"
 #include "MPU6050.hpp"
 
 namespace oasis {
@@ -38,12 +40,21 @@ namespace oasis {
     private:
         bool create_impl();
         void init_impl();
-        void update_impl();
+        [[noreturn]] void update_impl();
 
 
         IMUBuffer m_buffer;
 
+#if OASIS_ENABLE_IMU_SENSOR
+        // I2C0 is reserved for the MPU6050; MainProcess uses I2C1 for SHT31/MAX30102.
+        I2CUnit m_imu_i2c {{
+            .port = I2C_NUM_0,
+            .sda_gpio = GPIO_NUM_9,
+            .scl_gpio = GPIO_NUM_8,
+            .frequency_hz = 100'000,
+        }};
         std::optional<MPU6050> m_mpu6050;
+#endif
         TaskHandle_t m_task_handle = nullptr;
         TaskHandle_t m_main_process_task_handle = nullptr;
 
@@ -52,5 +63,5 @@ namespace oasis {
         static constexpr uint32_t PRIORITY = 6;
     };
 
-} // namespace s
+}
 #endif //FIRMWARE_IMUPROCESS_HPP

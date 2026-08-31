@@ -1,4 +1,5 @@
 #include "NTC.hpp"
+#include <array>
 #include <cmath>
 #include <algorithm>
 
@@ -10,16 +11,20 @@ namespace oasis {
 
     void NTCSensor::init() {
         // Register the ADC channel during initialization
-        adc_unit.add_channel(channel);
+        //adc_unit.add_channel(channel);
     }
 
     float NTCSensor::read() {
-        // 1. Read calibrated voltage from ADCUnit in mV
-        int raw_mv = adc_unit.read(channel);
-        float v_adc_mv = static_cast<float>(raw_mv);
+        // ADCUnit stores configured GPIOs in slots. ESP32-S3 ADC output is
+        // represented as a 12-bit raw value here; the divider uses 3.3 V.
+        std::array<int, 4> values {};
+        if (channel >= values.size() || !adc_unit.read_oneshot(values, 20)) {
+            return -999.0f;
+        }
+        const float v_adc_mv = static_cast<float>(values[channel]) * config.v_cc_mv / 4095.0f;
 
         // 2. Calculate NTC resistance based on high-side circuit topology
-        float r_ntc = calculate_resistance(v_adc_mv);
+        const float r_ntc = calculate_resistance(v_adc_mv);
 
         // 3. Convert resistance to Celsius temperature using the Beta equation
         return calculate_temperature(r_ntc);
